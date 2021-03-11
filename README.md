@@ -1,2 +1,2 @@
-# Konf_MSD20_Radman_Urbanek
+# Konf_M20_Radman_Urbanek
 Konfig, Team H
