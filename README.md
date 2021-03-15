@@ -39,6 +39,7 @@ Current implemented Classes are:
 3. Main.java
 4. SimpleDrink.java
 5. Coffee.java
+6. Tea.java
 
 ## First implementation ##
 - Configurated a new github-repository.
@@ -57,4 +58,5 @@ Current implemented Classes are:
 
 ## Changes ##
 - Adding new Class "Coffee" - Subclass from Drink (Mario)
+- Adding new class "Tea" - Subclass from Drink (Theresa)
 
