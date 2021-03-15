@@ -1,3 +1,8 @@
+Gruppe H
+Radman Mario
+Urbanek Theresa
+
+
 # Software Configuration Management #
 
 ## Drinks Sample ###
