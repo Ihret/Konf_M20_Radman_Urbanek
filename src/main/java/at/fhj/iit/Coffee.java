@@ -31,6 +31,8 @@ public class Coffee extends Drink {
             this.strength = strength;
 
         this.volume = (1.00/strength) * water.getVolume() + milk.getVolume();
+        // Rounding without Math
+        this.volume = (double)((int)(this.volume*1000))/1000;
     }
 
     /**
@@ -61,5 +63,9 @@ public class Coffee extends Drink {
     @Override
     public boolean isAlcoholic() {
         return false;
+    }
+
+    public String toString() {
+        return "A coffee called " + this.name + ". It has a volume of " + this.volume + " liter and consists of " + this.milk.getVolume() + " liter milk.";
     }
 }
