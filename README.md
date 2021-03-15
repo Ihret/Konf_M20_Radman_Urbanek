@@ -38,3 +38,23 @@ Current implemented Classes are:
 2. Liquid.java
 3. Main.java
 4. SimpleDrink.java
+5. Coffee.java
+
+## First implementation ##
+- Configurated a new github-repository.
+- Added team members.
+- git clone --> connected the local git repo with the github repo
+- Added the given files to the local repo.
+- git add --> adding file to the staging area (adding all standard files)
+- git commit -m --> adding files with message to the commit area
+- git push --> adding files from the commit area to the online repo
+- git pull --> getting the files from the online repo into the local
+
+## Used manuals and instructions ##
+- [UEBUNG2 - Insctruction sheet - FH Joanneum Moodle] (https://elearning.fh-joanneum.at/pluginfile.php/62610/mod_resource/content/2/Konfig%20Uebung02%20-%20der%20Weg%20zur%20ersten%20Abgabe%2020210311.pdf)
+- [Markdown Cheat Sheet] (https://www.markdownguide.org/cheat-sheet)
+- [Informations about Subclasses - FH Joanneum Moodle] (https://elearning.fh-joanneum.at/pluginfile.php/62121/mod_resource/content/1/01_Vorlesung1_2.pdf)
+
+## Changes ##
+- Adding new Class "Coffee" - Subclass from Drink (Mario)
+
