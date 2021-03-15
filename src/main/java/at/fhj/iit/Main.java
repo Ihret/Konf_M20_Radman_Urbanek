@@ -13,5 +13,6 @@ public class Main {
 
         Drink c = new Coffee("Capuccino",0.2,0.025,7);
         System.out.println(c);
-    }
+        Tea t = new Tea ("Winterwonderland", 0.4, 0.002, "mixed");
+        System.out.println(t);    }
 }
