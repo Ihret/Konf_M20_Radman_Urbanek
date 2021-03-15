@@ -10,5 +10,8 @@ public class Main {
 
         Drink d = new SimpleDrink("Rotwein",l);
         System.out.println(d);
+
+        Drink c = new Coffee("Capuccino",0.2,0.025,7);
+        System.out.println(c);
     }
 }
