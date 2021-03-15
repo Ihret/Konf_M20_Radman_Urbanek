@@ -1,6 +1,6 @@
-Gruppe H
-Radman Mario
-Urbanek Theresa
+# Gruppe H
+- Radman Mario
+- Urbanek Theresa
 
 
 # Software Configuration Management #
@@ -26,7 +26,7 @@ currently tested with
 
 ## Given instructions ##
 
-We are given instructions for this project through insctructionssheet UEBUNG2.
+We are given instructions for this project through insctruction sheet UEBUNG2.
 Additionalle we got the Classes Drink.java, Liquid.java, Main.java and SimpleDrink.java.
 After the upload of this standard classes in the src and the standard pom.xml we startet implementing all further excecutions in this readme.
 
