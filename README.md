@@ -58,5 +58,15 @@ Current implemented Classes are:
 
 ## Changes ##
 - Adding new Class "Coffee" - Subclass from Drink (Mario)
-- Adding new class "Tea" - Subclass from Drink (Theresa)
+- Adding in main: output of coffee; updating Class "Coffee" with toString method and rounding of volume
+- Adding new Class "Tea" - Subclass from Drink (Theresa)
+- Adding in main: output of tea
 
+## Procedure ##
+before each change following steps where excecuted:
+- git pull
+- git add
+- git commit -m "reason for change"
+- git push
+
+and afterwards the README.md was updated and seperated commitet
