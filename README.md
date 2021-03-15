@@ -23,3 +23,18 @@ currently tested with
 
 - open project directory with IntelliJ
 - with JDK 13
+
+## Given instructions ##
+
+We are given instructions for this project through insctructionssheet UEBUNG2.
+Additionalle we got the Classes Drink.java, Liquid.java, Main.java and SimpleDrink.java.
+After the upload of this standard classes in the src and the standard pom.xml we startet implementing all further excecutions in this readme.
+
+## Classes ##
+
+Current implemented Classes are:
+
+1. Drink.java
+2. Liquid.java
+3. Main.java
+4. SimpleDrink.java
