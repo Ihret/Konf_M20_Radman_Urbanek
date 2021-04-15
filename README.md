@@ -70,3 +70,7 @@ before each change following steps where excecuted:
 - git push
 
 and afterwards the README.md was updated and seperated commitet
+
+## Branches for testing ##
+- 15.4.2021: TU: added new branch for testing named theresatest
+
