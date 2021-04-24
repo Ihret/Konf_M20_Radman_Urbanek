@@ -87,7 +87,25 @@ and afterwards the README.md was updated and seperated commitet
 - 15.04.2021: TU: deleted branches "theresatest" nad "marioBranchTest"
 - 24.04.2021: TU: added new branch for testing class Tea - named "teatest"
 
-### .gitignore ###
+### classes ###
+- TeaTest
+	* testVolume: tests the volume of the tea
+	* testAlcoholic: tests if the tea is alcoholic
+	* testAlcoholAmount: tests how much alcoholic volem the tea has
+
+## .gitignore ##
 - 24.04.2021: .gitignore file created
 - 24.04.2021: added java endings
+
+
+
+# JavaDoc #
+| tag | parameter | description |
+| *@author* | name | describes the author
+| *@version* | version | version entry |
+| *@see* | reference | link to a different part of the doku |
+| *@param* | name description | parameter description of method |
+| *@return* | description | return value of method |
+| *@exception* | classname description | describes the exception from the method
+| *@throws* | classname description | describes the exception from the method
 
