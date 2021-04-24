@@ -85,6 +85,7 @@ and afterwards the README.md was updated and seperated commitet
 - 15.04.2021: TU: added new branch for testing - named "theresatest"
 - 15.04.2021: MR: added new branch for testing - named "marioBranchTest"
 - 15.04.2021: TU: deleted branches "theresatest" nad "marioBranchTest"
+- 24.04.2021: TU: added new branch for testing class Tea - named "teatest"
 
 ### .gitignore ###
 - 24.04.2021: .gitignore file created
