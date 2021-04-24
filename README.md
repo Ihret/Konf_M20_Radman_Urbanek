@@ -86,3 +86,7 @@ and afterwards the README.md was updated and seperated commitet
 - 15.04.2021: MR: added new branch for testing - named "marioBranchTest"
 - 15.04.2021: TU: deleted branches "theresatest" nad "marioBranchTest"
 
+### .gitignore ###
+- 24.04.2021: .gitignore file created
+- 24.04.2021: added java endings
+
