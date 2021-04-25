@@ -38,18 +38,89 @@ class TeaTest {
         }
 
         // VERIFY PHASE
-        assertEquals(true, alcoholic);
+        assertEquals(true, alcoholic, String.valueOf(0.001));
     }
 
     @Test
-    @DisplayName("Testing alcohol amount")
-    public void testAlcoholAmount() {
+    @DisplayName("Testing alcohol percent")
+    public void testAlcoholPercent() {
         // EXERCISE PHASE
         double actual = tea.getAlcoholPercent();
 
         // VERIFY PHASE
-        assertEquals(0.04, actual);
+        assertEquals(0.04, actual, 0.001);
     }
 
+    @Test
+    @DisplayName("Testing amountInLWater")
+    public void  testAmountInLWater() {
+        // EXERCISE PHASE
+        double actual = tea.getAmountInLWater();
+
+        // VERIFY PHASE
+        assertEquals(0.5, actual, 0.001);
+    }
+
+    @Test
+    @DisplayName("Testing amountInLRum")
+    public void  testAmountInLRum() {
+        // EXERCISE PHASE
+        double actual = tea.getAmountInLRum();
+
+        // VERIFY PHASE
+        assertEquals(0.002, actual, 0.001);
+    }
+
+    @Test
+    @DisplayName("Testing name")
+    public void  testName() {
+        // EXERCISE PHASE
+        String actual = tea.getName();
+        String expected = "trialtea";
+
+        // VERIFY PHASE
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    @DisplayName("Testing herbs")
+    public void  testHerbs() {
+        // EXERCISE PHASE
+        String actual = tea.getHerbs();
+        String expected = "garden";
+
+        // VERIFY PHASE
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    @DisplayName("Testing water")
+    void waterTest() {
+        // EXERCISE PHASE
+        Liquid actual = tea.getWater();
+
+        // VERIFY PHASE
+        assertEquals(new Liquid("Water", 100, 0.000), actual);
+    }
+
+    @Test
+    @DisplayName("Testing liquid water")
+    public void  testWater() {
+        // EXERCISE PHASE
+        Liquid actual = tea.getWater();
+
+        // VERIFY PHASE
+        assertEquals(new Liquid("water", 0.5, 0), actual);
+    }
+
+    @Test
+    @DisplayName("Testing liquid rum")
+    public void  testRum() {
+        // EXERCISE PHASE
+        Liquid actual = tea.getRum();
+
+        // VERIFY PHASE
+        assertEquals(new Liquid("rum", 0.002, 20), actual);
+    }
 
 }

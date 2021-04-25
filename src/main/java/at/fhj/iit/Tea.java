@@ -5,8 +5,11 @@ public class Tea extends Drink {
     Liquid water;
     Liquid rum;
     String herbs;
+    String name;
     double volume;
     double alcoholPercent;
+    double amountInLWater;
+    double amountInLRum;
 
     /**
      * TEA
@@ -20,6 +23,10 @@ public class Tea extends Drink {
         rum = new Liquid("rum", amountInLRum, 20);
         this.water = water;
         this.rum = rum;
+        this.amountInLWater = amountInLWater;
+        this.amountInLRum = amountInLRum;
+        this.herbs = herbs;
+        this.name = name;
 
         this.volume = water.getVolume() + rum.getVolume();
         this.alcoholPercent = water.getVolume() * water.getAlcoholPercent() + rum.getVolume() * rum.getAlcoholPercent();
@@ -58,5 +65,54 @@ public class Tea extends Drink {
 
     public String toString() {
         return "Tea called " + name + " with rum. Has in total " + alcoholPercent + " percent alcohol by volume.";
+    }
+
+    /**
+     *
+     * @return amount in L from water
+     */
+    public double getAmountInLWater() {
+        return amountInLWater;
+    }
+
+    /**
+     *
+     * @return  amount in L from rum
+     */
+    public double getAmountInLRum() {
+        return amountInLRum;
+    }
+
+    /**
+     *
+     * @return  name of tea
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     *
+     * @return  name of herbs
+     */
+    public String getHerbs() {
+        return herbs;
+    }
+
+
+    /**
+     *
+     * @return  kind of liquid: water
+     */
+    public Liquid getWater() {
+        return water;
+    }
+
+    /**
+     *
+     * @return  kind of liquid: rum
+     */
+    Liquid getRum() {
+        return rum;
     }
 }
