@@ -28,20 +28,6 @@ class TeaTest {
     }
 
     @Test
-    @DisplayName("Testing alcoholic")
-    public void testAlcoholic() {
-        // EXERCISE PHASE
-        boolean alcoholic = false;
-        double actual = tea.getAlcoholPercent();
-        if (actual > 0) {
-            alcoholic = true;
-        }
-
-        // VERIFY PHASE
-        assertEquals(true, alcoholic, String.valueOf(0.001));
-    }
-
-    @Test
     @DisplayName("Testing alcohol percent")
     public void testAlcoholPercent() {
         // EXERCISE PHASE
@@ -49,6 +35,26 @@ class TeaTest {
 
         // VERIFY PHASE
         assertEquals(0.04, actual, 0.001);
+    }
+
+    @Test
+    @DisplayName("Testing alcoholic")
+    public void testAlcoholic() {
+        // EXERCISE PHASE
+        boolean actual = tea.isAlcoholic();
+
+        // VERIFY PHASE
+        assertEquals(true, actual);
+    }
+
+    @Test
+    @DisplayName("Testing to String")
+    public void testToString() {
+        // EXERCISE PHASE
+        String actual = tea.toString();
+
+        // VERIFY PHASE
+        assertEquals("Tea called " + tea.getName() + " with rum. Has in total " + tea.getAlcoholPercent() + " percent alcohol by volume.", actual);
     }
 
     @Test
@@ -91,16 +97,6 @@ class TeaTest {
 
         // VERIFY PHASE
         assertEquals(expected, actual);
-    }
-
-    @Test
-    @DisplayName("Testing water")
-    void waterTest() {
-        // EXERCISE PHASE
-        Liquid actual = tea.getWater();
-
-        // VERIFY PHASE
-        assertEquals(new Liquid("Water", 100, 0.000), actual);
     }
 
     @Test

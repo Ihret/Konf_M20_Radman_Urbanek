@@ -161,8 +161,15 @@ and afterwards the README.md was updated and seperated commitet
 ## JUnit Test Classes ##
 - TeaTest
 	* testVolume: tests the volume of the tea
+	* testAlcoholPercent: tests the alcohol percent
 	* testAlcoholic: tests if the tea is alcoholic
-	* testAlcoholAmount: tests how much alcoholic volem the tea has
+	* testToString: tests if toString is returning the correct string
+	* testAmountInLWater: tests the amount of water
+	* testAmountInLRum: tests the amount of rum
+	* testName: tests the name of the tea
+	* testHerbs: tests the kind of herbs
+	* testWater: tests if the Liquid variable of water and all of it's instance variables are correctly saved
+	* testRum: tests if the Liquid variable of rum and all of it's onstance variables are correctly saved 
 - CoffeeTest
 	* volumeStrengthTest: tests the volume depending on the strength of the coffee. Also testing strength over- and underflow.
 	* strengthTest: tests the correct handling of strength esp. over- and underflow.
@@ -181,9 +188,14 @@ It presents then the percentage of the coverage for the whole package and each c
 In our application, the test coverage had following results:
 
 - TeaTest:
+	Tea: class: 100%, method: 100% (11/11), line: 100% (22/22)
+	Drink: class: 100%, method: 50% (1/2), line: 75% (3/4)
+	Liquid: class: 100%, method: 55% (5/9), line: 58% (14/24)
 	
 - CoffeeTest:
-	100% Test-Coverage is given for the Classes Coffee and Drink (either for Method and Line).
+	Coffee: class: 100%, method: 100% (8/8), line: 100% (18/18)
+	Drink: class: 100%, method: 100% (2/2), line: 100% (4/4)
+	Liquid: class: 100%, method: 55% (5/9), line: 62% (15/24)
 
 - General comment:
 	"Real" 100% is never fully possible, because sometimes developers are forgetting or overlooking something.
