@@ -290,10 +290,10 @@ and afterwards the README.md was updated and seperated commitet
 - Default constructor which is not implemented intentionally, cannot be given a documentation.
 - It is recommended to implement the default constructor (if needed) explicitly.
 - Example for documentation of explicit implemented default constructors:
-`/**
-* Sole constructor. (For invocation by subclass 
-* constructors, typically implicit.)
-*/`
+> /**
+> Sole constructor. (For invocation by subclass 
+> constructors, typically implicit.)
+> */
 
 ## Tag Conventions ##
 
