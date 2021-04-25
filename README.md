@@ -64,9 +64,9 @@ Not including the Classes for testing. These are listed in the Top "JUnit Test C
 
 ## Used manuals and instructions ##
 - [UEBUNG02 - Instruction sheet - FH Joanneum Moodle](https://elearning.fh-joanneum.at/pluginfile.php/62610/mod_resource/content/2/Konfig%20Uebung02%20-%20der%20Weg%20zur%20ersten%20Abgabe%2020210311.pdf)
-- [Markdown Cheat Sheet] (https://www.markdownguide.org/cheat-sheet)
+- [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet)
 - [Informations about Subclasses - FH Joanneum Moodle](https://elearning.fh-joanneum.at/pluginfile.php/62121/mod_resource/content/1/01_Vorlesung1_2.pdf)
-- [How to write a git commit message] (https://chris.beams.io/posts/git-commit/#seven-rules)
+- [How to write a git commit message](https://chris.beams.io/posts/git-commit/#seven-rules)
 - [UEBUNG04 - Instruction sheet - FH Joanneum Moodle](https://elearning.fh-joanneum.at/pluginfile.php/63595/mod_resource/content/0/Konfig%20Uebung04%20-Zweite%20Abgabe%2020210415.pdf)
 - [How to write JavaDoc Comments](https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html)
 
@@ -290,10 +290,10 @@ and afterwards the README.md was updated and seperated commitet
 - Default constructor which is not implemented intentionally, cannot be given a documentation.
 - It is recommended to implement the default constructor (if needed) explicitly.
 - Example for documentation of explicit implemented default constructors:
-	* `/**
-	  `* Sole constructor. (For invocation by subclass 
-	  `* constructors, typically implicit.)
-	  `*/
+`/**
+* Sole constructor. (For invocation by subclass 
+* constructors, typically implicit.)
+*/`
 
 ## Tag Conventions ##
 
