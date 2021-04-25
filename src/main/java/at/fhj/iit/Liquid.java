@@ -73,6 +73,7 @@ public class Liquid {
      * @param volume new volume
      */
     public void setVolume(double volume) {
+        checkVolume(volume);
         this.volume = volume;
     }
 
@@ -92,5 +93,20 @@ public class Liquid {
      */
     public void setAlcoholPercent(double alcoholPercent) {
         this.alcoholPercent = alcoholPercent;
+    }
+
+
+    @Override
+    public boolean equals(Object obj) {
+        Liquid liquid;
+
+        if (obj instanceof Liquid) {
+            liquid = (Liquid)obj;
+
+            if (this.volume == liquid.getVolume() && this.alcoholPercent == liquid.getAlcoholPercent() && this.name == liquid.name)
+                return true;
+        }
+
+        return false;
     }
 }

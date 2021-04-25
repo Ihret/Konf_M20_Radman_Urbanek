@@ -12,7 +12,7 @@ public class Coffee extends Drink {
     double volume;
 
     /**
-     * COFFEE
+     * COFFEE Constructor
      * @param name
      * @param literWater
      * @param literMilk
@@ -30,9 +30,9 @@ public class Coffee extends Drink {
         else
             this.strength = strength;
 
-        this.volume = (1.00/strength) * water.getVolume() + milk.getVolume();
+        this.volume = (1.00/this.strength) * water.getVolume() + milk.getVolume();
         // Rounding without Math
-        this.volume = (double)((int)(this.volume*1000))/1000;
+        this.volume = ((double)((int)(this.volume*1000)))/1000;
     }
 
     /**
@@ -67,5 +67,17 @@ public class Coffee extends Drink {
 
     public String toString() {
         return "A coffee called " + this.name + ". It has a volume of " + this.volume + " liter and consists of " + this.milk.getVolume() + " liter milk.";
+    }
+
+    int getStrength() {
+        return strength;
+    }
+
+    Liquid getWater() {
+        return water;
+    }
+
+    Liquid getMilk() {
+        return milk;
     }
 }
