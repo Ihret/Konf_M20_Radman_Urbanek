@@ -171,20 +171,25 @@ and afterwards the README.md was updated and seperated commitet
 	* alcoholTest: tests if the isAlcohol returns always false.
 	* waterTest: tests if the Liquid variable of Water and all of it's instancevariables are correctly saved.
 	* milkTest: tests if the Liquid variable of Milk and all of it's instancevariables are correctly saved.
+	* toStringTest: tests if toString is returning the correct String.
 	* liquidEqualsTrueTest: tests if the new override method for equals in Liquid is correctly working for two different instances with the same values. Should return true.
 	* liquidEqualsFalseTest: same test as "liquidEqualsTrueTest", but for two instances with different values. Should return false.
 
 ### Test coverage ###
+The test coverage can be checked in IntelliJ by using the option "Run Test with Coverage". 
+It presents then the percentage of the coverage for the whole package and each class seperate, also seperated by methods and lines.
+In our application, the test coverage had following results:
+
 - TeaTest:
 	
 - CoffeeTest:
-	It was tried to have a 100% test coverage. All variables of the class, superclass and also variables of implemented Objects inside the class are being tested.
-	Also new methods in other classes, who has been needed for the tests, are being tested (equals in Liquid).
+	100% Test-Coverage is given for the Classes Coffee and Drink (either for Method and Line).
 
 - General comment:
-	100% is never fully possible, because sometimes developers are forgetting or overlooking something.
+	"Real" 100% is never fully possible, because sometimes developers are forgetting or overlooking something.
+	The Test
 	Sometimes the test works only for one method, but another simple one is not supported.
-	Similar for variables. E.g. in the Liquid Constructor, it is not allowed to have a negative Volume as parameter. The setVolume function does not have this method included. So, a negative Volume is possible by using the setter. 
+	Similar for variables: For example, in the Liquid Constructor, it is not allowed to have a negative Volume as parameter. The setVolume function does not have this method included. So, a negative Volume is possible by using the setter. 
 	If a test for negative Volume is only been checked by the constructor, the possible negative volume through the setter will not be found.
 	Also new implemented methods could change the variables or functions and make mistakes in previously made tests.
 

@@ -132,6 +132,16 @@ class CoffeeTest {
         assertEquals(new Liquid("Milk", 50, 0.000), actual);
     }
 
+    @Test
+    @DisplayName("toString Test")
+    void toStringTest() {
+        // EXERCISE PHASE
+        String actual = coffee.toString();
+        String expected = "A coffee called " + coffee.getName() + ". It has a volume of " + coffee.getVolume() + " liter and consists of " + coffee.getMilk().getVolume() + " liter milk.";
+
+        // VERIFY PHASE
+        assertEquals(actual, expected);
+    }
 
     /**
      * TESTING OF EQUALS FUNCTION IN Liquid (Test Nr. 1)
