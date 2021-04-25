@@ -96,6 +96,11 @@ public class Liquid {
     }
 
 
+    /**
+     *
+     * @param obj
+     * @return
+     */
     @Override
     public boolean equals(Object obj) {
         Liquid liquid;
