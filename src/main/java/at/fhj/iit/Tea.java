@@ -43,7 +43,7 @@ public class Tea extends Drink {
      */
     @Override
     public double getAlcoholPercent() {
-        return 0;
+        return alcoholPercent;
     }
 
     /**
