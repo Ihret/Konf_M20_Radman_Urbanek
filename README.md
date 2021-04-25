@@ -63,12 +63,12 @@ Not including the Classes for testing. These are listed in the Top "JUnit Test C
 
 
 ## Used manuals and instructions ##
-- [UEBUNG02 - Instruction sheet - FH Joanneum Moodle] (https://elearning.fh-joanneum.at/pluginfile.php/62610/mod_resource/content/2/Konfig%20Uebung02%20-%20der%20Weg%20zur%20ersten%20Abgabe%2020210311.pdf)
+- [UEBUNG02 - Instruction sheet - FH Joanneum Moodle](https://elearning.fh-joanneum.at/pluginfile.php/62610/mod_resource/content/2/Konfig%20Uebung02%20-%20der%20Weg%20zur%20ersten%20Abgabe%2020210311.pdf)
 - [Markdown Cheat Sheet] (https://www.markdownguide.org/cheat-sheet)
-- [Informations about Subclasses - FH Joanneum Moodle] (https://elearning.fh-joanneum.at/pluginfile.php/62121/mod_resource/content/1/01_Vorlesung1_2.pdf)
+- [Informations about Subclasses - FH Joanneum Moodle](https://elearning.fh-joanneum.at/pluginfile.php/62121/mod_resource/content/1/01_Vorlesung1_2.pdf)
 - [How to write a git commit message] (https://chris.beams.io/posts/git-commit/#seven-rules)
-- [UEBUNG04 - Instruction sheet - FH Joanneum Moodle] (https://elearning.fh-joanneum.at/pluginfile.php/63595/mod_resource/content/0/Konfig%20Uebung04%20-Zweite%20Abgabe%2020210415.pdf)
-- [How to write JavaDoc Comments] (https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html)
+- [UEBUNG04 - Instruction sheet - FH Joanneum Moodle](https://elearning.fh-joanneum.at/pluginfile.php/63595/mod_resource/content/0/Konfig%20Uebung04%20-Zweite%20Abgabe%2020210415.pdf)
+- [How to write JavaDoc Comments](https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html)
 
 
 ## Changes ##
@@ -129,21 +129,13 @@ and afterwards the README.md was updated and seperated commitet
 		- Class variable: public TestedObject object;
 		- Implement @BeforeEach
 		- Implement Tests:
-			* ParameterizedTests: Mit CSV Quelle für denselben Test mit unterschiedlichen Parametern
-			* Test: Für einen einfachen Test
-			* assertEquals: Überprüfungsmethode des Tests - parameter sind der aktuelle und der erwartete Wert, ggf. Toleranz. Test ist positiv ausgefallen wenn idente Werte.
-			* assertNotEquals: Wie assertEquals. Test ist aber positiv ausgegangen, wenn nicht idente Werte.
+			* ParameterizedTests: Test with CSV-Source for the same test with different parameters
+			* Test: Simple Test
+			* assertEquals: Inspection method for the test - parameters are the current and the expected values, if necessary a tolerance. Test is positiv if values for expected and current are the same.
+			* assertNotEquals: Same as assertEquals, but the Test is positive if the values are not the same.
 
-## Branches for testing ##
-- 15.04.2021: TU: added new branch for testing - named "theresatest"
-- 15.04.2021: MR: added new branch for testing - named "marioBranchTest"
-- 15.04.2021: TU: deleted branches "theresatest" nad "marioBranchTest"
-- 24.04.2021: TU: added new branch for testing class Tea - named "teatest"
-- 24.04.2021: TU: merged the teatest branch to the main branch.
-- 25.04.2021: MR: added new branch for testing class Coffee - named "CoffeeTest"
-- 25.04.2021: MR: merged the CoffeeTest branch to the main branch.
 
-###
+## Branches (current) ##
 - teatest
 	* From Theresa Urbanek
 	* Init. Push 24.04.2021
@@ -157,6 +149,14 @@ and afterwards the README.md was updated and seperated commitet
 		- CoffeeTest.java
 	* Implements the Classes for testing the Class Coffee.
 	
+### Changes to branches ###
+- 15.04.2021: TU: added new branch for testing - named "theresatest"
+- 15.04.2021: MR: added new branch for testing - named "marioBranchTest"
+- 15.04.2021: TU: deleted branches "theresatest" nad "marioBranchTest"
+- 24.04.2021: TU: added new branch for testing class Tea - named "teatest"
+- 24.04.2021: TU: merged the teatest branch to the main branch.
+- 25.04.2021: MR: added new branch for testing class Coffee - named "CoffeeTest"
+- 25.04.2021: MR: merged the CoffeeTest branch to the main branch.
 
 ## JUnit Test Classes ##
 - TeaTest
@@ -291,9 +291,9 @@ and afterwards the README.md was updated and seperated commitet
 - It is recommended to implement the default constructor (if needed) explicitly.
 - Example for documentation of explicit implemented default constructors:
 	* `/**
-	  * Sole constructor. (For invocation by subclass 
-	  * constructors, typically implicit.)
-	  */`
+	  `* Sole constructor. (For invocation by subclass 
+	  `* constructors, typically implicit.)
+	  `*/
 
 ## Tag Conventions ##
 
