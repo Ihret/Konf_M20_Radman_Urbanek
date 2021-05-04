@@ -6,9 +6,6 @@
 	* git: Ihret
 	* mail: theresa.urbanek@edu.fh-joanneum.at
 
-# TO DO's #
-- [] asking if markdowns should be documented in the readme
-- [] pom.xml correcting so that Maven-Site-Process is working correct
 
 # Software Configuration Management #
 
@@ -89,6 +86,7 @@ Not including the Classes for testing. These are listed in the Top "JUnit Test C
 	* Changes in Coffee: Correction of wrong volume calculation in line 33. Adding new getters for strength, water and milk.
 	* Changes in Drink: Adding new getter for name.
 
+
 ## Procedure ##
 before each change following steps where excecuted:
 - git pull
@@ -112,11 +110,6 @@ and afterwards the README.md was updated and seperated commitet
 - git merge branchName
 - git commit -m "Message"
 - git push
-
-#### branch reset ####
-When there are problems with the merging of files, a reset of a branch to the current main version can be useful.
-For this, the current branch should not be the main. Then this git-command is used:
-- git reset --hard origin/main
 
 ### testing ###
 - Inside IntelliJ:
