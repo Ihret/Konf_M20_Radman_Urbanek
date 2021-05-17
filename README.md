@@ -155,6 +155,10 @@ For this, the current branch should not be the main. Then this git-command is us
 	* Classes included:
 		- CoffeeTest.java
 	* Implements the Classes for testing the Class Coffee.
+- cashRegister
+	* From Mario Radman
+	* Init. Push 17.05.2021
+
 	
 ### Changes to branches ###
 - 15.04.2021: TU: added new branch for testing - named "theresatest"
@@ -373,3 +377,9 @@ If used more then one tag, include them in the given order.
 - Multiple @throws tags (also known as @exception) should be listed alphabetically by the exception names.  
 - Multiple @see tags should be ordered as shown in the following link:
 	* [Ordering Multiple Tags](https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html#orderingmultipletags)
+
+## git tag - versions ##
+- git tag -a v"number" -m "commit message"
+- git tag v"number"-lw (lightweight tag, -a, -s, -m not used)
+- git show v"number"
+- git checkout v"number"
