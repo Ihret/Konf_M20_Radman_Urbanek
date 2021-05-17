@@ -102,10 +102,15 @@ and afterwards the README.md was updated and seperated commitet
 - git branch (shows branches)
 - git branch branchName (creates new branch)
 - git checkout branchName (changes to new branch)
-- git push -u origin branchName (uploads local branch)
-- git branch -d branchName (delets newBranch locally)
-- git push origin --delete branchName (delets newBranch online)
+- git branch -d branchName (delets branch locally)
 - git merge branchName (attention: working directory MUST BE MAIN!!!)
+
+#### remote branches ####
+- git push -u origin branchName (uploads local branch)
+- git branch -r (to see all remote branches)
+- git branch -a (to see all remote and lokal branches)
+- git checkout -b branchName (checkout to remote branch)
+- git push origin --delete branchName (delets remote branch)
 
 #### branch merge ####
 - git checkout main
