@@ -6,6 +6,9 @@
 	* git: Ihret
 	* mail: theresa.urbanek@edu.fh-joanneum.at
 
+# TO DO's #
+- [] asking if markdowns should be documented in the readme
+- [] pom.xml correcting so that Maven-Site-Process is working correct
 
 # Software Configuration Management #
 
@@ -86,7 +89,6 @@ Not including the Classes for testing. These are listed in the Top "JUnit Test C
 	* Changes in Coffee: Correction of wrong volume calculation in line 33. Adding new getters for strength, water and milk.
 	* Changes in Drink: Adding new getter for name.
 
-
 ## Procedure ##
 before each change following steps where excecuted:
 - git pull
@@ -100,16 +102,26 @@ and afterwards the README.md was updated and seperated commitet
 - git branch (shows branches)
 - git branch branchName (creates new branch)
 - git checkout branchName (changes to new branch)
-- git push -u origin branchName (uploads local branch)
-- git branch -d branchName (delets newBranch locally)
-- git push origin --delete branchName (delets newBranch online)
+- git branch -d branchName (delets branch locally)
 - git merge branchName (attention: working directory MUST BE MAIN!!!)
+
+#### remote branches ####
+- git push -u origin branchName (uploads local branch)
+- git branch -r (to see all remote branches)
+- git branch -a (to see all remote and lokal branches)
+- git checkout -b branchName (checkout to remote branch)
+- git push origin --delete branchName (delets remote branch)
 
 #### branch merge ####
 - git checkout main
 - git merge branchName
 - git commit -m "Message"
 - git push
+
+#### branch reset ####
+When there are problems with the merging of files, a reset of a branch to the current main version can be useful.
+For this, the current branch should not be the main. Then this git-command is used:
+- git reset --hard origin/main
 
 ### testing ###
 - Inside IntelliJ:
@@ -148,6 +160,10 @@ and afterwards the README.md was updated and seperated commitet
 	* Classes included:
 		- CoffeeTest.java
 	* Implements the Classes for testing the Class Coffee.
+- cashRegister
+	* From Mario Radman
+	* Init. Push 17.05.2021
+
 	
 ### Changes to branches ###
 - 15.04.2021: TU: added new branch for testing - named "theresatest"
@@ -366,3 +382,9 @@ If used more then one tag, include them in the given order.
 - Multiple @throws tags (also known as @exception) should be listed alphabetically by the exception names.  
 - Multiple @see tags should be ordered as shown in the following link:
 	* [Ordering Multiple Tags](https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html#orderingmultipletags)
+
+## git tag - versions ##
+- git tag -a v"number" -m "commit message"
+- git tag v"number"-lw (lightweight tag, -a, -s, -m not used)
+- git show v"number"
+- git checkout v"number"

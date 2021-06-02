@@ -1,9 +1,11 @@
 package at.fhj.iit;
 
+import java.util.Date;
+
 /**
  * represents a simple drink liquid which can be used in drinks
  */
-public class SimpleDrink extends Drink{
+public class SimpleDrink extends Drink implements Selling {
 
     /**
      * uses only one liquid
@@ -56,5 +58,20 @@ public class SimpleDrink extends Drink{
 
     public String toString(){
         return "Simple Drink called " + name + " with " + l.getAlcoholPercent() + " percent alcohol by volume";
+    }
+
+    @Override
+    public double getPrice() {
+        return 0;
+    }
+
+    @Override
+    public Date getDate() {
+        return null;
+    }
+
+    @Override
+    public String getSeller() {
+        return null;
     }
 }

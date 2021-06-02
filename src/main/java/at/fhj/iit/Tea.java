@@ -1,6 +1,8 @@
 package at.fhj.iit;
 
-public class Tea extends Drink {
+import java.util.Date;
+
+public class Tea extends Drink implements Selling {
 
     Liquid water;
     Liquid rum;
@@ -114,5 +116,20 @@ public class Tea extends Drink {
      */
     Liquid getRum() {
         return rum;
+    }
+
+    @Override
+    public double getPrice() {
+        return 0;
+    }
+
+    @Override
+    public Date getDate() {
+        return null;
+    }
+
+    @Override
+    public String getSeller() {
+        return null;
     }
 }

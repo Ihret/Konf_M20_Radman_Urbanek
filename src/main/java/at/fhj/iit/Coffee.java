@@ -1,10 +1,12 @@
 package at.fhj.iit;
 
+import java.util.Date;
+
 /**
  * COFFEE
  * Represents all types of nonalcoholic Coffee.
  */
-public class Coffee extends Drink {
+public class Coffee extends Drink implements Selling {
 
     Liquid water;
     Liquid milk;
@@ -79,5 +81,20 @@ public class Coffee extends Drink {
 
     Liquid getMilk() {
         return milk;
+    }
+
+    @Override
+    public double getPrice() {
+        return 0;
+    }
+
+    @Override
+    public Date getDate() {
+        return null;
+    }
+
+    @Override
+    public String getSeller() {
+        return null;
     }
 }
