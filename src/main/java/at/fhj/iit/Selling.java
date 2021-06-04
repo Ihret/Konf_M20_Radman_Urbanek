@@ -8,5 +8,4 @@ public interface Selling {
     public Date getDate();
 
     public String getSeller();
-
 }

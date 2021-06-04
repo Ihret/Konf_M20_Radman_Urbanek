@@ -10,8 +10,6 @@ public class Tea extends Drink implements Selling {
     String name;
     double volume;
     double alcoholPercent;
-    double amountInLWater;
-    double amountInLRum;
 
     /**
      * TEA
@@ -23,10 +21,6 @@ public class Tea extends Drink implements Selling {
         super(name);
         water = new Liquid("water", amountInLWater, 0);
         rum = new Liquid("rum", amountInLRum, 20);
-        this.water = water;
-        this.rum = rum;
-        this.amountInLWater = amountInLWater;
-        this.amountInLRum = amountInLRum;
         this.herbs = herbs;
         this.name = name;
 
@@ -71,22 +65,6 @@ public class Tea extends Drink implements Selling {
 
     /**
      *
-     * @return amount in L from water
-     */
-    public double getAmountInLWater() {
-        return amountInLWater;
-    }
-
-    /**
-     *
-     * @return  amount in L from rum
-     */
-    public double getAmountInLRum() {
-        return amountInLRum;
-    }
-
-    /**
-     *
      * @return  name of tea
      */
     public String getName() {
@@ -120,12 +98,12 @@ public class Tea extends Drink implements Selling {
 
     @Override
     public double getPrice() {
-        return 0;
+        return ((double)((int)((this.water.getVolume() * 14.5455 + this.rum.getVolume() * 100)*100)))/100;
     }
 
     @Override
     public Date getDate() {
-        return null;
+        return new Date(System.currentTimeMillis());
     }
 
     @Override

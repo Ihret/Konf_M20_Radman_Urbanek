@@ -72,25 +72,25 @@ public class Coffee extends Drink implements Selling {
     }
 
     int getStrength() {
-        return strength;
+        return this.strength;
     }
 
     Liquid getWater() {
-        return water;
+        return this.water;
     }
 
     Liquid getMilk() {
-        return milk;
+        return this.milk;
     }
 
     @Override
     public double getPrice() {
-        return 0;
+        return ((double)((int)(((this.water.getVolume() + this.milk.getVolume()) * 0.004 + this.strength * 0.04)*100)))/100;
     }
 
     @Override
     public Date getDate() {
-        return null;
+        return new Date(System.currentTimeMillis());
     }
 
     @Override

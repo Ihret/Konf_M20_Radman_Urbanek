@@ -1,5 +1,6 @@
 package at.fhj.iit;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -62,12 +63,12 @@ public class SimpleDrink extends Drink implements Selling {
 
     @Override
     public double getPrice() {
-        return 0;
+        return ((1 + l.getAlcoholPercent()) / 0.7) * getVolume();
     }
 
     @Override
     public Date getDate() {
-        return null;
+        return new Date(System.currentTimeMillis());
     }
 
     @Override
