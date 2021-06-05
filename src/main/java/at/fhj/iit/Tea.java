@@ -2,6 +2,10 @@ package at.fhj.iit;
 
 import java.util.Date;
 
+/**
+ * COFFEE
+ * Represents all types of alcoholic and nonalcoholic Teas.
+ */
 public class Tea extends Drink implements Selling {
 
     Liquid water;

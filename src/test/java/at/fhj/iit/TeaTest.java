@@ -6,6 +6,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * JUnit Test for the Class Tea.
+ * @author Theresa Urbanek
+ */
 class TeaTest {
     Tea tea;
 
@@ -57,25 +61,25 @@ class TeaTest {
         assertEquals("Tea called " + tea.getName() + " with rum. Has in total " + tea.getAlcoholPercent() + " percent alcohol by volume.", actual);
     }
 
-    @Test
-    @DisplayName("Testing amountInLWater")
-    public void  testAmountInLWater() {
-        // EXERCISE PHASE
-        double actual = tea.getAmountInLWater();
+//    @Test
+//    @DisplayName("Testing amountInLWater")
+//    public void  testAmountInLWater() {
+//        // EXERCISE PHASE
+//        double actual = tea.getAmountInLWater();
+//
+//        // VERIFY PHASE
+//        assertEquals(0.5, actual, 0.001);
+//    }
 
-        // VERIFY PHASE
-        assertEquals(0.5, actual, 0.001);
-    }
-
-    @Test
-    @DisplayName("Testing amountInLRum")
-    public void  testAmountInLRum() {
-        // EXERCISE PHASE
-        double actual = tea.getAmountInLRum();
-
-        // VERIFY PHASE
-        assertEquals(0.002, actual, 0.001);
-    }
+//    @Test
+//    @DisplayName("Testing amountInLRum")
+//    public void  testAmountInLRum() {
+//        // EXERCISE PHASE
+//        double actual = tea.getAmountInLRum();
+//
+//        // VERIFY PHASE
+//        assertEquals(0.002, actual, 0.001);
+//    }
 
     @Test
     @DisplayName("Testing name")
