@@ -1,4 +1,4 @@
-<project name="Calculator Documentation Demo">
+<project name="Drinks Documentation">
     <publishDate position="right"/>
     <version position="left"/>
     <body>
@@ -6,7 +6,15 @@
         <menu name="Overview">
             <item name="Project Structure" href="ProjectStructure.html" />
             <item name="README" href="README.html" />
+            <item name="Main" href="Main.html" />
+            <item name="Drink" href="Drink.html" />
+            <item name="Liquid" href="Liquid.html" />
+            <item name="Selling" href="Selling.html" />
+        </menu>
+        <menu name="Subclasses of Drink and their Test Classes">
             <item name="Coffee" href="Coffee.html" />
+            <item name="Tea" href="Tea.html" />
+            <item name="Coffee Test" href="CoffeeTest.html" />
             <item name="Tea Test" href="TeaTest.html" />
         </menu>
         <menu ref="reports" />
