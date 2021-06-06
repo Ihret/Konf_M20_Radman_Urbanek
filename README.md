@@ -50,6 +50,9 @@ Current implemented Classes are:
 4. SimpleDrink.java
 5. Coffee.java
 6. Tea.java
+7. Selling.java (interface)
+8. Seller.java (enum)
+9. CashRegister.java
 
 Not including the Classes for testing. These are listed in the Top "JUnit Test Classes".
 
@@ -88,6 +91,23 @@ Not including the Classes for testing. These are listed in the Top "JUnit Test C
 		- setVolume: Implement the checkVolume function in this function. Otherwise, there could be inconsistence or mistakes.
 	* Changes in Coffee: Correction of wrong volume calculation in line 33. Adding new getters for strength, water and milk.
 	* Changes in Drink: Adding new getter for name.
+- 04.06.2021:
+	* Adding new Interface Selling.java
+	* Implementing Interface Selling Override-methods in Tea.java, Coffee.java, SimpleDrinks.java
+- 05.06.2021:
+	* Adding new Class CashRegister.java
+		constructor, setter and getter
+		additional methods
+		- soldDrinks
+		- reportNoneAlcoholicDrinks
+		- reportLowAlcoholicDrinks
+		- reportHighAlcoholicDrinks
+		- reportSpecificDay
+		- reportSpecificSeller
+		- reportSpecificDaySeller
+		- randomNumber
+	* Adding new Enum Seller.java
+	* Updating main with report methods
 
 ## Procedure ##
 before each change following steps where excecuted:
@@ -161,8 +181,12 @@ For this, the current branch should not be the main. Then this git-command is us
 		- CoffeeTest.java
 	* Implements the Classes for testing the Class Coffee.
 - cashRegister
-	* From Mario Radman
+	* From Mario Radman/Theresa Urbanek
 	* Init. Push 17.05.2021
+	* Classes included:
+		- Seller.java
+		- Selling.java
+		- CashRegister.java
 
 	
 ### Changes to branches ###
