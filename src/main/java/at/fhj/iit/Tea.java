@@ -64,7 +64,7 @@ public class Tea extends Drink implements Selling {
     }
 
     /**
-     *
+     * method getName returns the name of the tea
      * @return  name of tea
      */
     public String getName() {
@@ -72,7 +72,7 @@ public class Tea extends Drink implements Selling {
     }
 
     /**
-     *
+     * method getHerbs returns the name of the used herbs in the tea
      * @return  name of herbs
      */
     public String getHerbs() {
@@ -81,7 +81,7 @@ public class Tea extends Drink implements Selling {
 
 
     /**
-     *
+     * method getWWater returns the liquid water
      * @return  kind of liquid: water
      */
     public Liquid getWater() {
@@ -89,16 +89,17 @@ public class Tea extends Drink implements Selling {
     }
 
     /**
-     *
+     * method getRum returns the liquid rum
      * @return  kind of liquid: rum
      */
-    Liquid getRum() {
+    public Liquid getRum() {
         return rum;
     }
 
+
     @Override
     public double getPrice() {
-        return ((double)((int)((this.water.getVolume() * 14.5455 + this.rum.getVolume() * 100)*100)))/100;
+        return ((double)((int)((water.getVolume() * 14.5455 + rum.getVolume() * 100)*100)))/100;
     }
 
     @Override
@@ -110,4 +111,6 @@ public class Tea extends Drink implements Selling {
     public String getSeller() {
         return null;
     }
+
 }
+

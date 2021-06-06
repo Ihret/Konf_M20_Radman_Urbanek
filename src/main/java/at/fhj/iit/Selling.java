@@ -8,4 +8,8 @@ public interface Selling {
     public Date getDate();
 
     public String getSeller();
+
+    public boolean isAlcoholic();
+
+    public double getAlcoholPercent();
 }
