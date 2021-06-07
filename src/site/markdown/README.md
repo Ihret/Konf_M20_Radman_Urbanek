@@ -215,7 +215,7 @@ For this, the current branch should not be the main. Then this git-command is us
 - SimpleDrinkTest.java
 - TeaTest.java
 
-[For full informations, see the automatic Maven Testclass Report](${basedir}/target/site/testapidocs/at/fhj/iit/package-summary.html)
+[For full informations, see the automatic Maven Testclass Report](testapidocs/at/fhj/iit/package-summary.html)
 	
 ### Test coverage ###
 The test coverage can be checked in IntelliJ by using the option "Run Test with Coverage". 

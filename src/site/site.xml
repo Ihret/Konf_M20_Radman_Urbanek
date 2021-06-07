@@ -5,25 +5,21 @@
 
         <menu name="Overview">
             <item name="README" href="README.html" />
-            <item name="Design and Function" href="DesignAndFunction.md" />
+            <item name="Design and Function" href="DesignAndFunction.html" />
             <item name="Project Structure" href="ProjectStructure.html" />
-            <item name="Tutorial" href="Tutorial" />
+            <item name="Tutorial" href="Tutorial.html" />
         </menu>
         <menu name="Important classes">
             <item name="CashRegister" href="CashRegister.html" />
             <item name="Selling" href="Selling.html" />
         </menu>
-        <menu name="Subclasses of Drink">
+        <menu name="Selfmade Subclasses of Drink">
             <item name="Coffee" href="Coffee.html" />
-            <item name="Liquid" href="Liquid.html" />
-            <item name="SimpleDrink" href="SimpleDrink.html" />
             <item name="Tea" href="Tea.html" />
         </menu>
         <menu name="JUnit Test Classes">
             <item name="CashRegister Test" href="CashRegisterTest.html" />
             <item name="Coffee Test" href="CoffeeTest.html" />
-            <item name="Liquid Test" href="LiquidTest.html" />
-            <item name="SimpleDrink Test" href="SimpleDrinkTest.html" />
             <item name="Tea Test" href="TeaTest.html" />
         </menu>
         <menu>
