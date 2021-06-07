@@ -12,7 +12,7 @@ public class CashRegister {
     // initiate varies variables
     private static List<CashRegister> cashRegisterList = new ArrayList<CashRegister>();
     Selling drink;
-    private int amount;
+    private int amountOfDrinks;
     private static Date date;
     private static CashRegister cash;
     private Seller seller;
@@ -41,17 +41,17 @@ public class CashRegister {
      * method getAmount gets the amount of a drink
      * @return amount
      */
-    public int getAmount() {
-        return amount;
+    public int getAmountOfDrinks() {
+        return amountOfDrinks;
     }
 
 
     /**
      * method setAmount sets the amount of a drink
-     * @param amount
+     * @param amountOfDrinks
      */
-    public void setAmount(int amount) {
-        this.amount = amount;
+    public void setAmountOfDrinks(int amountOfDrinks) {
+        this.amountOfDrinks = amountOfDrinks;
     }
 
     /**
@@ -89,13 +89,13 @@ public class CashRegister {
     /**
      * constructor CashRegister, creates a object with paramters: Selling drink, int amount, DAte date, Seller seller
      * @param drink
-     * @param amount
+     * @param amountOfDrinks
      * @param date
      * @param seller
      */
-    public CashRegister(Selling drink, int amount, Date date, Seller seller) {
+    public CashRegister(Selling drink, int amountOfDrinks, Date date, Seller seller) {
         this.drink = drink;
-        this.amount = amount;
+        this.amountOfDrinks = amountOfDrinks;
         this.date = date;
         this.seller = seller;
     }
@@ -120,6 +120,14 @@ public class CashRegister {
     }
 
     /**
+     * method sellDrink sells one kind of drink (tea or coffee)
+     * @param cashRegister
+     */
+    public static void sellDrink(CashRegister cashRegister) {
+        cashRegisterList.add(cashRegister);
+    }
+
+    /**
      * method reportNoneAlcoholicDrinks returns a String where due to the amount of alcohol in this case 0 a report is written/calculated
      * @return
      */
@@ -129,7 +137,7 @@ public class CashRegister {
         for (int i = 0; i < cashRegisterList.size(); i++) {
             if (cashRegisterList.get(i).getDrink().isAlcoholic() == true) {
                 totalSales += cashRegisterList.get(i).getDrink().getPrice();
-               amount += cashRegisterList.get(i).getAmount();
+               amount += cashRegisterList.get(i).getAmountOfDrinks();
             }
         }
         return ("Total sales of none alcoholic drinks: " + totalSales + " currency unit, " + amount + " drinks (tea and coffee variations).");
@@ -162,7 +170,7 @@ public class CashRegister {
         for (int i = 0; i < cashRegisterList.size(); i++) {
             if (cashRegisterList.get(i).getDrink().getAlcoholPercent() > 16) {
                 totalSales += cashRegisterList.get(i).getDrink().getPrice();
-                amount += cashRegisterList.get(i).getAmount();
+                amount += cashRegisterList.get(i).getAmountOfDrinks();
             }
         }
         return ("Total sales of high alcoholic drinks (>16%): " + totalSales + " currency unit, " + amount + " drinks (tea and coffee variations).");
@@ -179,7 +187,7 @@ public class CashRegister {
         for (int i = 0; i < cashRegisterList.size(); i++) {
             if (cashRegisterList.get(i).getDate().equals(date)) {
                 totalSales += cashRegisterList.get(i).getDrink().getPrice();
-                amount += cashRegisterList.get(i).getAmount();
+                amount += cashRegisterList.get(i).getAmountOfDrinks();
             }
         }
         return ("Total sales of " + date + ": " + totalSales + " currency unit, " + amount + " drinks (tea and coffee variations).");
@@ -196,7 +204,7 @@ public class CashRegister {
         for (int i = 0; i < cashRegisterList.size(); i++) {
             if (cashRegisterList.get(i).getDrink().getAlcoholPercent() > 16) {
                 totalSales += cashRegisterList.get(i).getDrink().getPrice();
-                amount += cashRegisterList.get(i).getAmount();
+                amount += cashRegisterList.get(i).getAmountOfDrinks();
             }
         }
         return ("Total sales of seller " + seller + ": "  + totalSales + " currency unit, " + amount + " drinks (tea and coffee variations).");
@@ -214,7 +222,7 @@ public class CashRegister {
         for (int i = 0; i < cashRegisterList.size(); i++) {
             if (cashRegisterList.get(i).getDrink().getAlcoholPercent() > 16) {
                 totalSales += cashRegisterList.get(i).getDrink().getPrice();
-                amount += cashRegisterList.get(i).getAmount();
+                amount += cashRegisterList.get(i).getAmountOfDrinks();
             }
         }
         return ("Total sales of seller " + seller + " on " + date + ": " + totalSales + " currency unit, " + amount + " drinks (tea and coffee variations).");
