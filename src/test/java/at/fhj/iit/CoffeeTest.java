@@ -5,6 +5,9 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+
+import java.util.Date;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
@@ -177,6 +180,39 @@ public class CoffeeTest {
 
         // VERIFY PHASE
         assertNotEquals(liquid1,liquid2);
+    }
+
+
+    /**
+     * TESTING FOR CORRECT DATE
+     * Needed for proper Testing of Coffee.
+     */
+    @Test
+    @DisplayName("Test for getting actual Date")
+    void testDate() {
+
+        // EXERCISE PHASE
+        Date actual = coffee.getDate();
+        Date expected = new Date(System.currentTimeMillis());
+
+        // VERIFY PHASE
+        assertEquals(actual, expected);
+    }
+
+
+    /**
+     * TEST FOR CORRECT CALCULATION OF PRIZE
+     * Includes Test for correct rounding.
+     */
+    @Test
+    @DisplayName("Correct prizing Test")
+    void prizingCalculationTest(){
+
+        // EXERCISE PHASE
+        double actual = coffee.getPrice();
+
+        // VERIFY PHASE
+        assertEquals(actual,2.88,0.001);
     }
 
 }
