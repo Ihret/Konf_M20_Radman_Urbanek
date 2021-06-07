@@ -3,24 +3,32 @@ package at.fhj.iit;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Date;
 
-import static org.junit.jupiter.api.Assertions.*;
-
+/**
+ * JUnit Test for the Class SimpleDrink
+ * @author Mario Radman
+ * @author Theresa Urbanek
+ */
 public class SimpleDrinkTest {
 
     // Needed for all functions.
     public SimpleDrink simpleDrink;
 
+    /**
+     * creates a object of type simpleDrink
+     */
     @BeforeEach
     void setup() {
         // SETUP PHASE
         simpleDrink = new SimpleDrink("Drink Name", new Liquid("Liquid Name", 50, 0.5));
     }
 
+    /**
+     * getVolume Test
+     */
     @Test
     @DisplayName("getVolume Test")
     public void getVolumeTest() {
@@ -31,6 +39,9 @@ public class SimpleDrinkTest {
         assertEquals(50, actual);
     }
 
+    /**
+     * getAlcoholPercent Test
+     */
     @Test
     @DisplayName("getAlcoholPercent Test")
     public void getAlcoholPercentTest() {
@@ -41,6 +52,9 @@ public class SimpleDrinkTest {
         assertEquals(0.5, actual);
     }
 
+    /**
+     * getPrice Test
+     */
     @Test
     @DisplayName("getPrice Test")
     public void getPriceTest() {
@@ -51,6 +65,9 @@ public class SimpleDrinkTest {
         assertEquals(107.14, actual, 0.001);
     }
 
+    /**
+     * getDate Test
+     */
     @Test
     @DisplayName("getDate Test")
     public void getDateTest() {
@@ -61,6 +78,10 @@ public class SimpleDrinkTest {
         assertEquals(new Date(System.currentTimeMillis()), actual);
     }
 
+    /**
+     * isAlcoholic 1. Test
+     * For alcoholic is true
+     */
     @Test
     @DisplayName("isAlcoholic Test for True")
     public void isAlcoholicTrueTest() {
@@ -71,6 +92,10 @@ public class SimpleDrinkTest {
         assertEquals(true, actual);
     }
 
+    /**
+     * isAlcoholic 2. Test
+     * For alcoholic is false
+     */
     @Test
     @DisplayName("isAlcoholic Test for False")
     public void isAlcoholicFalseTest() {
@@ -84,6 +109,9 @@ public class SimpleDrinkTest {
         assertEquals(false, actual);
     }
 
+    /**
+     * Tests the toString method
+     */
     @Test
     @DisplayName("toString Test")
     public void toStringTest() {

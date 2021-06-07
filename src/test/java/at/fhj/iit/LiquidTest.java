@@ -3,25 +3,30 @@ package at.fhj.iit;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
-
-import java.util.Date;
-
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * JUnit Test for the Class Liquid
+ * @author Mario Radman
+ * @author Theresa Urbanek
+ */
 public class LiquidTest {
 
     // Needed for all functions.
     public Liquid liquid;
-    private Object IllegalArgumentException;
 
+    /**
+     * creates a object of type Tea
+     */
     @BeforeEach
     void setup() {
         // SETUP PHASE
         liquid = new Liquid("LiquidName", 50, 0.5);
     }
 
+    /**
+     * Tests the Constructor by testing equality of a new object
+     */
     @Test
     @DisplayName("Constructor and checkVolume Test")
     public void constructorTest() {
@@ -32,8 +37,13 @@ public class LiquidTest {
         assertEquals(newLiquid, liquid);
     }
 
+    /**
+     * Makes a checkVolume Test which is wrong
+     * Does it by performing a setVolume
+     * throws an exception because volume is zero which is not allowed
+     */
     @Test
-    @DisplayName("Constructor and checkVolume Test - Exception Expected")
+    @DisplayName("checkVolume Test - Exception Expected")
     public void constructorWithExceptionTest() {
         try {
             // EXERCISE PHASE
@@ -44,6 +54,9 @@ public class LiquidTest {
         }
     }
 
+    /**
+     * getName Test
+     */
     @Test
     @DisplayName("getName Test")
     public void getNameTest() {
@@ -54,6 +67,9 @@ public class LiquidTest {
         assertEquals("LiquidName", actual);
     }
 
+    /**
+     * setName Test
+     */
     @Test
     @DisplayName("setName Test")
     public void setNameTest() {
@@ -64,6 +80,9 @@ public class LiquidTest {
         assertEquals("Correct Name", liquid.getName());
     }
 
+    /**
+     * setVolume Test
+     */
     @Test
     @DisplayName("setVolume Test")
     public void setVolumeTest() {
@@ -74,6 +93,9 @@ public class LiquidTest {
         assertEquals(17, liquid.getVolume());
     }
 
+    /**
+     * setAlcoholPercent Test
+     */
     @Test
     @DisplayName("setAlcoholPercent Test")
     public void setAlcoholPercentTest() {
