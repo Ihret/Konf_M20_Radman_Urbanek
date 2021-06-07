@@ -1,12 +1,13 @@
 package at.fhj.iit;
 
-import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Scanner;
 
+/**
+ * Implements a CashRegister via ArrayList to store all sellings, a constructor for sold objects and methods for reports.
+ */
 public class CashRegister {
 
     // initiate varies variables
@@ -23,9 +24,9 @@ public class CashRegister {
 
     /**
      * constructor CashRegister, creates a object with paramters: Selling drink, int amount, DAte date, Seller seller
-     * @param drink
-     * @param amountOfDrinks
-     * @param seller
+     * @param drink represents the Selling drink, that has been sold - needs to be constructed
+     * @param amountOfDrinks number of drinks consumed of this same type with this order
+     * @param seller Enum Seller who sold it
      */
     public CashRegister(Selling drink, int amountOfDrinks, Seller seller) {
         this.drink = drink;
@@ -37,7 +38,7 @@ public class CashRegister {
 
     /**
      * method sellDrink sells any kind of drink
-     * @param cashRegister
+     * @param cashRegister CashRegister-Objekt which has been solds and saved into the central ArrayList
      */
     public static void sellDrink(CashRegister cashRegister) {
         cashRegisterList.add(cashRegister);
@@ -46,7 +47,7 @@ public class CashRegister {
 
     /**
      * Calculates the sales volume of all non Alcoholic Drinks
-     * @return
+     * @return double
      */
     public static double reportNoneAlcoholicDrinks() {
         double sales = 0;
@@ -63,7 +64,7 @@ public class CashRegister {
 
     /**
      * Calculates the sales volume of all low Alcoholic Drinks (lower or equal 16%)
-     * @return
+     * @return double
      */
     public static double reportLowAlcoholicDrinks() {
         double sales = 0;
@@ -79,7 +80,7 @@ public class CashRegister {
 
     /**
      * Calculates the sales volume of all high Alcoholic Drinks (higher than 16%)
-     * @return
+     * @return double
      */
     public static double reportHighAlcoholicDrinks() {
         double sales = 0;
@@ -95,8 +96,8 @@ public class CashRegister {
 
     /**
      * Calculates the sales volume of all Drinks on a specific day
-     * @param date
-     * @return
+     * @param date is a Date for which all sellings should be calculated to sales amount
+     * @return double
      */
     public static double reportSpecificDay(Date date) {
         double sales = 0;
@@ -111,8 +112,8 @@ public class CashRegister {
 
     /**
      * Calculates the sales volume of all Drinks sold by a specific seller
-     * @param seller
-     * @return
+     * @param seller enum Seller for which all sellings should be calculated to sales amount
+     * @return double
      */
     public static double reportSpecificSeller(Seller seller) {
         double sales = 0;
@@ -127,9 +128,9 @@ public class CashRegister {
 
     /**
      * Calculates the sales volume of all Drinks sold by a specific seller on a specific day
-     * @param date
-     * @param seller
-     * @return
+     * @param date is a Date for which all sellings should be calculated to sales amount
+     * @param seller enum Seller for which all sellings should be calculated to sales amount
+     * @return double
      */
     public static double reportSpecificDaySeller(Date date, Seller seller) {
         double sales = 0;
@@ -144,9 +145,9 @@ public class CashRegister {
 
 
     /**
-     *
-     * @param obj
-     * @return
+     * equals method which compares this object to anotherone of its kind
+     * @param obj CashRegister object to compare with this object
+     * @return boolean
      */
     @Override
     public boolean equals(Object obj) {
@@ -162,19 +163,11 @@ public class CashRegister {
         return false;
     }
 
-
-
-
-
-
-    // -----------------GETTERandSETTER--------------------
-
-
+    // GETTER AND SETTER
 
     static List<CashRegister> getCashRegisterList() {
         return cashRegisterList;
     }
-
 
     /**
      * method getDrink returns the kind of drink
@@ -207,41 +200,4 @@ public class CashRegister {
     public Seller getSeller() {
         return seller;
     }
-
-
-//    /**
-//     * method setAmount sets the amount of a drink
-//     * @param amountOfDrinks
-//     */
-//    public void setAmountOfDrinks(int amountOfDrinks) {
-//        this.amountOfDrinks = amountOfDrinks;
-//    }
-//
-//    /**
-//     * method setDrink sets the kind of drink
-//     * @param drink
-//     */
-//    public void setDrink(Selling drink) {
-//        this.drink = drink;
-//    }
-//
-//    /**
-//     * method setDate sets a date via SimpleDateFormat with only the day without time
-//     * @param date
-//     */
-//    public void setDate(Date date) {
-//        this.date = sdf.format(date);
-//    }
-//
-//    /**
-//     * method setSeller sets the name of the seller which is to choose from an enum list called Seller
-//     * @param seller
-//     */
-//    public void setSeller(Seller seller) {
-//        this.seller = seller;
-//    }
-//
-//    static void setCashRegisterList(List<CashRegister> cashRegisterList) {
-//        CashRegister.cashRegisterList = cashRegisterList;
-//    }
 }

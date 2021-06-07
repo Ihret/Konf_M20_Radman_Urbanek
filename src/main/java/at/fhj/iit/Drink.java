@@ -16,7 +16,6 @@ public abstract class Drink {
      * @param name name of the drink
      *
      */
-
     public Drink(String name) {
         this.name = name;
     }
@@ -42,6 +41,10 @@ public abstract class Drink {
      */
     public abstract boolean isAlcoholic();
 
+    /**
+     * Returnes the name of the drink
+     * @return String name of the drink
+     */
     public String getName() {
         return name;
     }

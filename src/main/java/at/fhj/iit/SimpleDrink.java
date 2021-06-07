@@ -1,6 +1,5 @@
 package at.fhj.iit;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -57,15 +56,27 @@ public class SimpleDrink extends Drink implements Selling {
         return false;
     }
 
+    /**
+     * toString-Method implements information about alcohol and name.
+     * @return String
+     */
     public String toString(){
         return "Simple Drink called " + name + " with " + l.getAlcoholPercent() + " percent alcohol by volume";
     }
 
+    /**
+     * Calculates the price through informations in the member variables
+     * @return double
+     */
     @Override
     public double getPrice() {
         return ((double)((int)(((1 + l.getAlcoholPercent()) / 0.7) * getVolume()*100)))/100;
     }
 
+    /**
+     * calculates the current date
+     * @return Date
+     */
     @Override
     public Date getDate() {
         return new Date(System.currentTimeMillis());
