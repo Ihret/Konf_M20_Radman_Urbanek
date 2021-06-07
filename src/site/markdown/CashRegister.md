@@ -32,23 +32,17 @@ Represents a further function of the drinks - reports.
 |tea|A kind of drink.|
 |coffee|A kind of drink.|
 
-
--------------
-Beneath still to write new!!!!
-
------------
-
-### Calculation of volume ###
-
-The calculation of volume depends on the amount of water and rum.
-
-## Alcoholic tea with rum ##
-
-This class represents either a non-alcoholic tea or an alcoholic one spiced up with rum.
-
-### Calculation of alcoholic tea-rum ###
-
-The calculation of alcohol percentage depends how much rum and water are chosen, but the more water the less alcohol percentage.
+## Methods ##
+- sellDrink: sells any kind of drink
+- equals: compares if an object is an instance of CashRegister
+  
+### methods used for reports ###
+- reportNoneAlcoholicDrinks: Calculates the sales volume of all non-alcoholic drinks#
+- reportLowAlcoholicDrinks: Calculates the sales volume of all low alcoholic drinks (lower or equal 16%)
+- reportHighAlcoholicDrinks: Calculates the sales volume of all high Alcoholic Drinks (higher than 16%)
+- reportSpecificDay: Calculates the sales volume of all Drinks on a specific day
+- reportSpecificSeller: Calculates the sales volume of all Drinks sold by a specific seller
+- reportSpecificDaySeller: Calculates the sales volume of all Drinks sold by a specific seller on a specific day
 
 ## TO DOs ##
 - [x] Write a markdown file for the class
