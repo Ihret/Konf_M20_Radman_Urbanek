@@ -12,7 +12,7 @@ public class CashRegister {
     // initiate varies variables
     private static List<CashRegister> cashRegisterList = new ArrayList<CashRegister>();
     private static SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yy");
-    Selling drink;
+    private Selling drink;
     private int amountOfDrinks;
     private static String date;
     private static CashRegister cash;
