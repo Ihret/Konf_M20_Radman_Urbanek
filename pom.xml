@@ -54,6 +54,30 @@
       <timezone>Europe/Vienna</timezone>
       <properties/>
     </developer>
+    <developer>
+      <id>marioradman</id>
+      <name>Mario Radman</name>
+      <email>mario.radman@edu.fh-joanneum.at</email>
+      <url>https://github.com/marioradman</url>
+      <organization>FH JOANNEUM GmbH</organization>
+      <organizationUrl>https://www.fh-joanneum.at/iit</organizationUrl>
+      <roles>
+        <role>MSD20 Student</role>
+      </roles>
+      <timezone>Europe/Vienna</timezone>
+    </developer>
+    <developer>
+      <id>Ihret</id>
+      <name>Theresa Urbanek</name>
+      <email>theresa.urabnek@edu.fh-joanneum.at</email>
+      <url>https://github.com/Ihret</url>
+      <organization>FH JOANNEUM GmbH</organization>
+      <organizationUrl>https://www.fh-joanneum.at/iit</organizationUrl>
+      <roles>
+        <role>MSD20 Student</role>
+      </roles>
+      <timezone>Europe/Vienna</timezone>
+    </developer>
   </developers>
 
   <properties>
@@ -63,6 +87,7 @@
     <junit-platform.version>5.8.0-M1</junit-platform.version>
   </properties>
 
+  <!-- JUnit 5 testing -->
   <dependencies>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
@@ -70,38 +95,28 @@
       <version>5.7.0-M1</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>5.7.0-M1</version>
+<!--      <version>5.6.2</version>-->
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>5.7.0-M1</version>
+<!--      <version>5.6.2</version>-->
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-params</artifactId>
+      <version>5.7.0-M1</version>
+<!--      <version>5.6.2</version>-->
+      <scope>test</scope>
+    </dependency>
   </dependencies>
-
-<!--  <dependencies>-->
-<!--    &lt;!&ndash; JUnit 5 testing &ndash;&gt;-->
-<!--    <dependency>-->
-<!--      <groupId>org.junit.jupiter</groupId >-->
-<!--      <artifactId>junit-jupiter</artifactId>-->
-<!--      <version>5.7.0-M1</version>-->
-<!--      <scope>test</scope>-->
-<!--    </dependency>-->
-<!--    <dependency>-->
-<!--      <groupId>org.junit.jupiter</groupId>-->
-<!--      <artifactId>junit-jupiter-api</artifactId>-->
-<!--      <version>5.7.0-M1</version>-->
-<!--&lt;!&ndash;      <version>5.6.2</version>&ndash;&gt;-->
-<!--      <scope>test</scope>-->
-<!--    </dependency>-->
-<!--    <dependency>-->
-<!--      <groupId>org.junit.jupiter</groupId>-->
-<!--      <artifactId>junit-jupiter-engine</artifactId>-->
-<!--      <version>5.7.0-M1</version>-->
-<!--&lt;!&ndash;      <version>5.6.2</version>&ndash;&gt;-->
-<!--      <scope>test</scope>-->
-<!--    </dependency>-->
-<!--    <dependency>-->
-<!--      <groupId>org.junit.jupiter</groupId>-->
-<!--      <artifactId>junit-jupiter-params</artifactId>-->
-<!--      <version>5.7.0-M1</version>-->
-<!--&lt;!&ndash;      <version>5.6.2</version>&ndash;&gt;-->
-<!--      <scope>test</scope>-->
-<!--    </dependency>-->
-<!--  </dependencies>-->
 
   <build>
     <plugins>
