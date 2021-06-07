@@ -20,7 +20,7 @@ public class Main {
 
         //reports
 //        SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
-        CashRegister.soldDrinks(30);
+//        CashRegister.soldDrinks(30);
         Date date = new Date(2021, 05, 20);
 
         System.out.println(CashRegister.reportNoneAlcoholicDrinks());

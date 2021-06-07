@@ -24,7 +24,7 @@ public class Tea extends Drink implements Selling {
     public Tea(String name, Double amountInLWater, Double amountInLRum, String herbs) {
         super(name);
         water = new Liquid("water", amountInLWater, 0);
-        rum = new Liquid("rum", amountInLRum, 20);
+        rum = amountInLRum <= 0 ? null : new Liquid("rum", amountInLRum, 20);
         this.herbs = herbs;
         this.name = name;
 
@@ -32,6 +32,27 @@ public class Tea extends Drink implements Selling {
         this.alcoholPercent = water.getVolume() * water.getAlcoholPercent() + rum.getVolume() * rum.getAlcoholPercent();
 
     }
+
+    /**
+     *
+     * @param obj
+     * @return
+     */
+    @Override
+    public boolean equals(Object obj) {
+        Tea tea;
+
+        if (obj instanceof Tea) {
+            tea = (Tea) obj;
+
+            if (this.name == tea.getName() && this.herbs == tea.getHerbs() && this.volume == tea.getVolume() && this.alcoholPercent == tea.getAlcoholPercent() &&
+                    this.water.equals(tea.getWater()) && this.rum.equals(tea.getRum()))
+                return true;
+        }
+
+        return false;
+    }
+
 
     /**
      * Calculates and returns volume of drink

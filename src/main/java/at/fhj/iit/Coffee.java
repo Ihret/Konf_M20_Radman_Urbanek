@@ -39,6 +39,26 @@ public class Coffee extends Drink implements Selling {
     }
 
     /**
+     *
+     * @param obj
+     * @return
+     */
+    @Override
+    public boolean equals(Object obj) {
+        Coffee coffee;
+
+        if (obj instanceof Coffee) {
+            coffee = (Coffee) obj;
+
+            if (this.name == coffee.getName() && this.strength == coffee.getStrength() && this.volume == coffee.getVolume() &&
+                    this.water.equals(coffee.getWater()) && this.milk.equals(coffee.getMilk()))
+                return true;
+        }
+
+        return false;
+    }
+
+    /**
      * Calculates and returns volume of drink
      *
      * @return the volume of drink in liter
