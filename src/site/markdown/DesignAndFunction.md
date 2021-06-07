@@ -1,6 +1,7 @@
 # Design and Functionality #
 
 - @author Theresa Urbanek
+- @author Mario Radman
 - @date 07/06/2021
 
 ## step-by-step ##

@@ -1,6 +1,7 @@
 # Tutorial #
 
 - @author Theresa Urbanek
+- @author Mario Radman
 - @date 07/06/2021
 
 ## Overview ##
@@ -19,6 +20,6 @@ multiple classes with different jobs
 |CashRegister|constructor, generates Drinks - teas and coffees, methods for reports|
 |testclasses|tests all kinds of options of the code|
 
-for more detailed information, please look up the different single markdowns of teh classes
+for more detailed information, please look up the different single markdowns of the classes
 
     
