@@ -63,7 +63,7 @@ public class SimpleDrink extends Drink implements Selling {
 
     @Override
     public double getPrice() {
-        return ((1 + l.getAlcoholPercent()) / 0.7) * getVolume();
+        return ((double)((int)(((1 + l.getAlcoholPercent()) / 0.7) * getVolume()*100)))/100;
     }
 
     @Override

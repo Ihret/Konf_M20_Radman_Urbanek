@@ -36,7 +36,7 @@ public class CashRegister {
 
 
     /**
-     * method sellDrink sells one kind of drink
+     * method sellDrink sells any kind of drink
      * @param cashRegister
      */
     public static void sellDrink(CashRegister cashRegister) {
@@ -166,7 +166,15 @@ public class CashRegister {
 
 
 
+
     // -----------------GETTERandSETTER--------------------
+
+
+
+    static List<CashRegister> getCashRegisterList() {
+        return cashRegisterList;
+    }
+
 
     /**
      * method getDrink returns the kind of drink
@@ -177,28 +185,11 @@ public class CashRegister {
     }
 
     /**
-     * method setDrink sets the kind of drink
-     * @param drink
-     */
-    public void setDrink(Selling drink) {
-        this.drink = drink;
-    }
-
-    /**
      * method getAmount gets the amount of a drink
      * @return amount
      */
     public int getAmountOfDrinks() {
         return amountOfDrinks;
-    }
-
-
-    /**
-     * method setAmount sets the amount of a drink
-     * @param amountOfDrinks
-     */
-    public void setAmountOfDrinks(int amountOfDrinks) {
-        this.amountOfDrinks = amountOfDrinks;
     }
 
     /**
@@ -210,14 +201,6 @@ public class CashRegister {
     }
 
     /**
-     * method setDate sets a date via SimpleDateFormat with only the day without time
-     * @param date
-     */
-    public void setDate(Date date) {
-        this.date = sdf.format(date);
-    }
-
-    /**
      * method getSeller gets the name of the seller which is to choose from an enum list called Seller
      * @return
      */
@@ -225,20 +208,40 @@ public class CashRegister {
         return seller;
     }
 
-    /**
-     * method setSeller sets the name of the seller which is to choose from an enum list called Seller
-     * @param seller
-     */
-    public void setSeller(Seller seller) {
-        this.seller = seller;
-    }
 
-
-    static List<CashRegister> getCashRegisterList() {
-        return cashRegisterList;
-    }
-
-    static void setCashRegisterList(List<CashRegister> cashRegisterList) {
-        CashRegister.cashRegisterList = cashRegisterList;
-    }
+//    /**
+//     * method setAmount sets the amount of a drink
+//     * @param amountOfDrinks
+//     */
+//    public void setAmountOfDrinks(int amountOfDrinks) {
+//        this.amountOfDrinks = amountOfDrinks;
+//    }
+//
+//    /**
+//     * method setDrink sets the kind of drink
+//     * @param drink
+//     */
+//    public void setDrink(Selling drink) {
+//        this.drink = drink;
+//    }
+//
+//    /**
+//     * method setDate sets a date via SimpleDateFormat with only the day without time
+//     * @param date
+//     */
+//    public void setDate(Date date) {
+//        this.date = sdf.format(date);
+//    }
+//
+//    /**
+//     * method setSeller sets the name of the seller which is to choose from an enum list called Seller
+//     * @param seller
+//     */
+//    public void setSeller(Seller seller) {
+//        this.seller = seller;
+//    }
+//
+//    static void setCashRegisterList(List<CashRegister> cashRegisterList) {
+//        CashRegister.cashRegisterList = cashRegisterList;
+//    }
 }

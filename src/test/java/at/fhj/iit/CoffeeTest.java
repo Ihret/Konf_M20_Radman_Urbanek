@@ -5,10 +5,11 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Date;
 
-import static org.junit.jupiter.api.Assertions.*;
+
 
 /**
  * JUnit Test for the Class Coffee.
@@ -213,6 +214,35 @@ public class CoffeeTest {
 
         // VERIFY PHASE
         assertEquals(actual,2.88,0.001);
+    }
+
+    /**
+     * TESTING OF EQUALS FUNCTION IN Coffee (Test Nr. 1)
+     */
+    @Test
+    @DisplayName("Coffee Equals Override Test - True")
+    void coffeeEqualsTrueTest() {
+
+        // EXERCISE PHASE
+        Coffee newCoffee = new Coffee("Coffee Name 3! - 100%", 100, 50, 3);
+
+        // VERIFY PHASE
+        assertEquals(newCoffee, coffee);
+    }
+
+
+    /**
+     * TESTING OF EQUALS FUNCTION IN Coffee (Test Nr. 2)
+     */
+    @Test
+    @DisplayName("Coffee Equals Override Test - False")
+    void coffeeEqualsFalseTest() {
+
+        // EXERCISE PHASE
+        Coffee newCoffee = new Coffee("Coffee Name 3! - 10%", 100, 50, 3);
+
+        // VERIFY PHASE
+        assertNotEquals(newCoffee, coffee);
     }
 
 }

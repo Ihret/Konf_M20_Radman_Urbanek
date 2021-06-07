@@ -6,15 +6,13 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
  * JUnit Test for the Class CashRegister.
@@ -162,6 +160,35 @@ public class CashRegisterTest {
 
         // VERIFY PHASE
         assertEquals(0, actual, 0.001);
+    }
+
+    /**
+     * TESTING OF EQUALS FUNCTION IN CashRegister (Test Nr. 1)
+     */
+    @Test
+    @DisplayName("CashRegister Equals Override Test - True")
+    void coffeeEqualsTrueTest() {
+
+        // EXERCISE PHASE
+        CashRegister newCashRegister = new CashRegister(new Tea("NameOfLowAlcoholicTea0", 0.4, 0.002, "mixed"),2, Seller.TIM);
+
+        // VERIFY PHASE
+        assertEquals(cashRegisterList.get(0), newCashRegister);
+    }
+
+
+    /**
+     * TESTING OF EQUALS FUNCTION IN CashRegister (Test Nr. 2)
+     */
+    @Test
+    @DisplayName("CashRegister Equals Override Test - False")
+    void coffeeEqualsFalseTest() {
+
+        // EXERCISE PHASE
+        CashRegister newCashRegister = new CashRegister(new Tea("NameOfLowAlcoholicTeaWRONG", 0.4, 0.002, "mixed"),2, Seller.TIM);
+
+        // VERIFY PHASE
+        assertNotEquals(cashRegisterList.get(0), newCashRegister);
     }
 
 

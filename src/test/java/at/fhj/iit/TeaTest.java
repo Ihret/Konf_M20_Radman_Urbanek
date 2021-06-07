@@ -161,4 +161,43 @@ public class TeaTest {
         assertEquals(actual,7.47,0.001);
     }
 
+    /**
+     * TESTING OF EQUALS FUNCTION IN Tea (Test Nr. 1)
+     */
+    @Test
+    @DisplayName("Tea Equals Override Test - True")
+    void teaEqualsTrueTest() {
+
+        // EXERCISE PHASE
+        Tea newTea = new Tea("trialtea", 0.5, 0.002, "garden");
+
+        // VERIFY PHASE
+        assertEquals(newTea, tea);
+    }
+
+
+    /**
+     * TESTING OF EQUALS FUNCTION IN Tea (Test Nr. 2)
+     */
+    @Test
+    @DisplayName("Tea Equals Override Test - False")
+    void coffeeEqualsFalseTest() {
+
+        // EXERCISE PHASE
+        Tea newTea = new Tea("trialteaWRONG", 0.5, 0.002, "garden");
+
+        // VERIFY PHASE
+        assertNotEquals(newTea, tea);
+    }
+
+    @Test
+    @DisplayName("toString Test")
+    public void toStringTest() {
+        // EXERCISE PHASE
+        String actual = tea.toString();
+
+        // VERIFY PHASE
+        assertEquals("Tea called trialtea with rum. Has in total 0.04 percent alcohol by volume.", actual);
+    }
+
 }
