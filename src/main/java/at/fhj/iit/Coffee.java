@@ -16,9 +16,9 @@ public class Coffee extends Drink implements Selling {
 
     /**
      * COFFEE Constructor
-     * @param name
-     * @param literWater
-     * @param literMilk
+     * @param name String which represents the name of this coffee
+     * @param literWater amout of Water needed for production
+     * @param literMilk amount of milk needed for production
      * @param strength From 1-10, where 1 ist the weak and 10 is strong. Over- or underflow will be set to 10 resp. 1.
      */
     public Coffee(String name, double literWater, double literMilk, int strength) {
@@ -39,9 +39,9 @@ public class Coffee extends Drink implements Selling {
     }
 
     /**
-     *
-     * @param obj
-     * @return
+     * equals method which compares this object to anotherone of its kind
+     * @param obj Coffee object to compare with this object
+     * @return boolean
      */
     @Override
     public boolean equals(Object obj) {
@@ -88,27 +88,51 @@ public class Coffee extends Drink implements Selling {
         return false;
     }
 
+    /**
+     * toString-Method implements information about volume of milk and in sum.
+     * @return String
+     */
     public String toString() {
         return "A coffee called " + this.name + ". It has a volume of " + this.volume + " liter and consists of " + this.milk.getVolume() + " liter milk.";
     }
 
+    /**
+     * getStrength
+     * @return int
+     */
     int getStrength() {
         return this.strength;
     }
 
+    /**
+     * getWater
+     * @return Liquid of water
+     */
     Liquid getWater() {
         return this.water;
     }
 
+    /**
+     * getMilk
+     * @return Liquid of milk
+     */
     Liquid getMilk() {
         return this.milk;
     }
 
+    /**
+     * Calculates the price through informations in the member variables
+     * @return double
+     */
     @Override
     public double getPrice() {
         return ((double)((int)(((this.water.getVolume() + this.milk.getVolume()) * 0.016 + this.strength * 0.16)*100)))/100;
     }
 
+    /**
+     * calculates the current date
+     * @return Date
+     */
     @Override
     public Date getDate() {
         return new Date(System.currentTimeMillis());

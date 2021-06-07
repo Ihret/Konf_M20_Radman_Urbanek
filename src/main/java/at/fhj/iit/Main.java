@@ -18,18 +18,5 @@ public class Main {
         Tea t = new Tea("Winterwonderland", 0.4, 0.002, "mixed");
         System.out.println(t);
 
-        //reports
-//        SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
-//        CashRegister.soldDrinks(30);
-        Date date = new Date(2021, 05, 20);
-
-        System.out.println(CashRegister.reportNoneAlcoholicDrinks());
-        System.out.println(CashRegister.reportLowAlcoholicDrinks());
-        System.out.println(CashRegister.reportHighAlcoholicDrinks());
-        System.out.println(CashRegister.reportSpecificDay(date));
-        System.out.println(CashRegister.reportSpecificSeller(Seller.TIM));
-        System.out.println(CashRegister.reportSpecificDaySeller(date, Seller.TIM));
-
-
     }
 }

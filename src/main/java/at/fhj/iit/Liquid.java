@@ -97,9 +97,9 @@ public class Liquid {
 
 
     /**
-     *
-     * @param obj
-     * @return
+     * equals method which compares this object to anotherone of its kind
+     * @param obj Liquid object to compare with this object
+     * @return boolean
      */
     @Override
     public boolean equals(Object obj) {

@@ -22,3 +22,6 @@
 # folder idea
 *.idea
 *.iml
+
+# folder for maven build and files
+target

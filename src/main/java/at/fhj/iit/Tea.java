@@ -3,7 +3,7 @@ package at.fhj.iit;
 import java.util.Date;
 
 /**
- * COFFEE
+ * TEA
  * Represents all types of alcoholic and nonalcoholic Teas.
  */
 public class Tea extends Drink implements Selling {
@@ -17,7 +17,6 @@ public class Tea extends Drink implements Selling {
 
     /**
      * TEA
-     *
      * @param name  name of tea (e.g. white tea with blueberries, Winterwonderland)
      * @param herbs kind of tea (e.g. herbal, black, white, fruit, mixed)
      */
@@ -34,9 +33,9 @@ public class Tea extends Drink implements Selling {
     }
 
     /**
-     *
-     * @param obj
-     * @return
+     * equals method which compares this object to anotherone of its kind
+     * @param obj Tea object to compare with this object
+     * @return boolean
      */
     @Override
     public boolean equals(Object obj) {
@@ -84,6 +83,10 @@ public class Tea extends Drink implements Selling {
         return true;
     }
 
+    /**
+     * toString-Method implements information about volume of rum and alcohol percent.
+     * @return String
+     */
     public String toString() {
         return "Tea called " + name + " with rum. Has in total " + alcoholPercent + " percent alcohol by volume.";
     }
@@ -121,12 +124,19 @@ public class Tea extends Drink implements Selling {
         return rum;
     }
 
-
+    /**
+     * Calculates the price through informations in the member variables
+     * @return double
+     */
     @Override
     public double getPrice() {
         return ((double)((int)((water.getVolume() * 14.5455 + rum.getVolume() * 100)*100)))/100;
     }
 
+    /**
+     * calculates the current date
+     * @return Date
+     */
     @Override
     public Date getDate() {
         return new Date(System.currentTimeMillis());
