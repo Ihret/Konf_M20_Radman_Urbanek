@@ -35,24 +35,6 @@ public class CashRegister {
     }
 
 
-//    /**
-//     * method soldDrinks creates a list of sold drinks with random numbers
-//     * @param amountOfSoldDrinks
-//     */
-//    public static void soldDrinks(int amountOfSoldDrinks) {
-//
-//        for (int i = amountOfSoldDrinks; i >= 0; i--) {
-//            if (i % 2 == 0) {
-//                tea = new Tea("tea", randomNumber(1, 250), randomNumber(1, 50), "none");
-//                cash = new CashRegister(tea, (int) randomNumber(1, 10), Seller.TIM);
-//            } else {
-//                coffee = new Coffee("coffee", randomNumber(1, 150), randomNumber(0, 50), (int) randomNumber(1, 10));
-//                cash = new CashRegister(coffee, (int) randomNumber(1, 10), Seller.JOE);
-//            }
-//            cashRegisterList.add(cash);
-//        }
-//    }
-
     /**
      * method sellDrink sells one kind of drink
      * @param cashRegister
@@ -87,7 +69,7 @@ public class CashRegister {
         double sales = 0;
 
         for (int i = 0; i < cashRegisterList.size(); i++) {
-            if (cashRegisterList.get(i).getDrink().getAlcoholPercent() <= 16) {
+            if (cashRegisterList.get(i).getDrink().isAlcoholic() && cashRegisterList.get(i).getDrink().getAlcoholPercent() <= 16) {
                 sales += cashRegisterList.get(i).getDrink().getPrice() * cashRegisterList.get(i).getAmountOfDrinks();
             }
         }
@@ -180,18 +162,6 @@ public class CashRegister {
         return false;
     }
 
-
-//    /**
-//     * method randomNumber gives back a random number in a given range
-//     * @param min
-//     * @param max
-//     * @return
-//     */
-//    public static double randomNumber(double min, double max) {
-//        double randomNum;
-//        randomNum = (int) ((Math.random() * (max - min)) + min);
-//        return randomNum;
-//    }
 
 
 

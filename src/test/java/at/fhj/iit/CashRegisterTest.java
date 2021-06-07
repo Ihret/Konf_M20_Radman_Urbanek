@@ -7,12 +7,14 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 /**
  * JUnit Test for the Class CashRegister.
@@ -59,8 +61,112 @@ public class CashRegisterTest {
         CashRegister.sellDrink(new CashRegister(new Tea(drinkName, amountWater, amountRum, herbs), amountOfDrinks, seller));
 
         // VERIFY PHASE
-        assertEquals(cashRegisterList.get(cashRegisterList.size()-1), expected);
+        assertEquals(expected, cashRegisterList.get(cashRegisterList.size()-1));
     }
+
+    @Test
+    @DisplayName("Nonalcoholic Drinks Report Test")
+    public void reportNonAlcoholicDrinksTest() {
+        // EXERCISE PHASE
+        double actual = CashRegister.reportNoneAlcoholicDrinks();
+
+        // VERIFY PHASE
+        assertEquals(2.4, actual, 0.001);
+    }
+
+    @Test
+    @DisplayName("Low alcoholic Drinks Report Test")
+    public void reportLowAlcoholicDrinksTest() {
+        // EXERCISE PHASE
+        double actual = CashRegister.reportLowAlcoholicDrinks();
+
+        // VERIFY PHASE
+        assertEquals(30.74, actual, 0.001);
+    }
+
+    @Test
+    @DisplayName("High alcoholic Drinks Report Test")
+    public void reportHighAlcoholicDrinksTest() {
+        // EXERCISE PHASE
+        double actual = CashRegister.reportHighAlcoholicDrinks();
+
+        // VERIFY PHASE
+        assertEquals(15681.02, actual, 0.001);
+    }
+
+    @Test
+    @DisplayName("Day Report Test")
+    public void reportSpecificDayTest() {
+        // EXERCISE PHASE
+        double actual = CashRegister.reportSpecificDay(new Date(System.currentTimeMillis()));
+
+        // VERIFY PHASE
+        assertEquals(15714.16, actual, 0.001);
+    }
+
+    @Test
+    @DisplayName("Seller Report Test")
+    public void reportSpecificSellerTest() {
+        // EXERCISE PHASE
+        double actual = CashRegister.reportSpecificSeller(Seller.JOE);
+
+        // VERIFY PHASE
+        assertEquals(6029.82, actual, 0.001);
+    }
+
+    @Test
+    @DisplayName("Report for spec. Seller on spec. Day Test")
+    public void reportSpecificDaySellerTest() {
+        // EXERCISE PHASE
+        double actual = CashRegister.reportSpecificDaySeller(new Date(System.currentTimeMillis()), Seller.JOE);
+
+        // VERIFY PHASE
+        assertEquals(6029.82, actual, 0.001);
+    }
+
+    @Test
+    @DisplayName("Day Report Test - Null")
+    public void reportSpecificDayNullTest() throws ParseException {
+        // EXERCISE PHASE
+        double actual = CashRegister.reportSpecificDay(sdf.parse("13-06-2020"));
+
+        // VERIFY PHASE
+        assertEquals(0.0, actual, 0.001);
+    }
+
+    @Test
+    @DisplayName("Seller Report Test - Null")
+    public void reportSpecificSellerNullTest() {
+        // EXERCISE PHASE
+        double actual = CashRegister.reportSpecificSeller(Seller.MIKE);
+
+        // VERIFY PHASE
+        assertEquals(0.0, actual, 0.001);
+    }
+
+    @Test
+    @DisplayName("Report for spec. Seller on spec. Day Test - Null for Seller")
+    public void reportSpecificDaySellerNullSellerTest() {
+        // EXERCISE PHASE
+        double actual = CashRegister.reportSpecificDaySeller(new Date(System.currentTimeMillis()), Seller.MIKE);
+
+        // VERIFY PHASE
+        assertEquals(0, actual, 0.001);
+    }
+
+    @Test
+    @DisplayName("Report for spec. Seller on spec. Day Test - Null for Date")
+    public void reportSpecificDaySellerNullDateTest() throws ParseException {
+        // EXERCISE PHASE
+        double actual = CashRegister.reportSpecificDaySeller(sdf.parse("13-06-2020"), Seller.JOE);
+
+        // VERIFY PHASE
+        assertEquals(0, actual, 0.001);
+    }
+
+
+
+
 
 
 
