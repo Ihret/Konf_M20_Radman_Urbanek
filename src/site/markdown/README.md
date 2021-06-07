@@ -1,4 +1,4 @@
-# Gruppe H
+# Gruppe H 
 - Radman Mario
 	* git: marioradman
 	* mail: mario.radman@edu.fh-joanneum.at
@@ -7,6 +7,8 @@
 	* mail: theresa.urbanek@edu.fh-joanneum.at
 	
 # Software Configuration Management #
+
+version 3.0
 
 ## Drinks Sample ###
 
@@ -206,6 +208,7 @@ For this, the current branch should not be the main. Then this git-command is us
 - 25.04.2021: MR: added new branch for testing class Coffee - named "CoffeeTest"
 - 25.04.2021: MR: merged the CoffeeTest branch to the main branch.
 - 17.05.2021: MR/TU: added new branch cashRegister for implementing new features: interface, enum and contructor CashRegister
+- 07.06.2021: MR: merged cashRegister with main branch
 
 
 ## JUnit Test Classes ##
