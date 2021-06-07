@@ -9,12 +9,15 @@ Only the uploaded files in the git repository are displayed here. Local files fr
     |      |---at
     |          |---fhj
     |             |---iit
+    |                |---CashRegister.java
     |                |---Coffee.java
     |                |---Drink.java
     |                |---Liquid.java
     |                |---Main.java
+    |                |---Seller.java
+    |                |---Selling.java
     |                |---SimpleDrink.java
-    |                |---Tea.java           
+    |                |---Tea.java    
     |---site
     |   |---markdown
     |      |---Coffee.md
@@ -23,12 +26,13 @@ Only the uploaded files in the git repository are displayed here. Local files fr
     |   |---resources
     |   |---site.xml    
     |---test
-        |---java
-           |---at
-               |---fhj
-                  |---iit
-                     |---CoffeeTest.java
-                     |---TeaTest.java
+    |   |---java
+    |       |---at
+    |          |---fhj
+    |              |---iit
+    |                 |---CashRegisterTest.java
+    |                 |---CoffeeTest.java
+    |                 |---TeaTest.java
     |-.gitignore
     |-pom.xml
     |-README.md

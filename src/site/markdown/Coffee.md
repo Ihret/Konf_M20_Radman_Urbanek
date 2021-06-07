@@ -1,11 +1,14 @@
 # Class Coffee #
 
+- @author Mario Radman
+- @date 03/05/2021
+
 Represents all types of nonalcoholic coffee.
 
 - Extends the abstract Class:
     * Drink
 - Implements the Interface:
-    * (none)
+    * Selling
 - Extended by the classes: 
     * (none)
 
@@ -38,5 +41,7 @@ This new Class should extend this class and override some variables and methods.
 
 ## TO DOs ##
 - [x] Write a markdown file for the class
-- [] Write a markdown file for the test class
+- [x] Write a markdown file for the test class
+  
+## Future Features ##
 - [] Make a alcoholic coffee class which extends this class

@@ -12,4 +12,6 @@
 - waterTest: tests the liquid water
 - testWater: tests the liquid water
 - testRum: tests the liquid rum
+- testDate: tests if the actual date is given
+- prizingCalculationTest: tests if the correct prize is given
 

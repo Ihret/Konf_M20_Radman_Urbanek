@@ -108,6 +108,13 @@ Not including the Classes for testing. These are listed in the Top "JUnit Test C
 		- randomNumber
 	* Adding new Enum Seller.java
 	* Updating main with report methods
+	
+- 07.06.2021:
+   * Updating CashRegister
+   * Adding new JUNIT-Test-Class: CashRegisterTest.java
+   * Updating markdowns: Coffee.md, TeaTest.md, ProjectStructure.md
+	* Adding new markdowns: CashRegister.md, CashRegisterTest.md, CoffeeTest.md, Tea.md
+
 
 ## Procedure ##
 before each change following steps where excecuted:
