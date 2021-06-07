@@ -7,14 +7,20 @@
             <item name="Project Structure" href="ProjectStructure.html" />
             <item name="README" href="README.html" />
             <item name="Main" href="Main.html" />
+            <item name="CashRegister" href="CashRegister" />
+            <item name="CashRegister Test" href="CashRegisterTest" />
             <item name="Drink" href="Drink.html" />
             <item name="Liquid" href="Liquid.html" />
             <item name="Selling" href="Selling.html" />
         </menu>
         <menu name="Subclasses of Drink and their Test Classes">
             <item name="Coffee" href="Coffee.html" />
+            <item name="Liquid" href="Liquid.html" />
+            <item name="SimpleDrink" href="SimpleDrink" />
             <item name="Tea" href="Tea.html" />
             <item name="Coffee Test" href="CoffeeTest.html" />
+            <item name="Liquid Test" href="LiquidTest.html" />
+            <item name="SimpleDrink Test" href="SimpleDrinkTest.html" />
             <item name="Tea Test" href="TeaTest.html" />
         </menu>
         <menu ref="reports" />
