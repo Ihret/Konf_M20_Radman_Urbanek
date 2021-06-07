@@ -70,9 +70,4 @@ public class SimpleDrink extends Drink implements Selling {
     public Date getDate() {
         return new Date(System.currentTimeMillis());
     }
-
-    @Override
-    public String getSeller() {
-        return null;
-    }
 }

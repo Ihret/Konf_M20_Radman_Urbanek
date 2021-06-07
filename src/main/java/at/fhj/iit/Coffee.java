@@ -86,16 +86,11 @@ public class Coffee extends Drink implements Selling {
 
     @Override
     public double getPrice() {
-        return ((double)((int)(((this.water.getVolume() + this.milk.getVolume()) * 0.004 + this.strength * 0.04)*100)))/100;
+        return ((double)((int)(((this.water.getVolume() + this.milk.getVolume()) * 0.016 + this.strength * 0.16)*100)))/100;
     }
 
     @Override
     public Date getDate() {
         return new Date(System.currentTimeMillis());
-    }
-
-    @Override
-    public String getSeller() {
-        return null;
     }
 }
