@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * JUnit Test for the Class Tea.
  * @author Theresa Urbanek
  */
-class TeaTest {
+public class TeaTest {
     Tea tea;
 
     /**
@@ -81,7 +81,7 @@ class TeaTest {
 //        assertEquals(0.002, actual, 0.001);
 //    }
 
-<<<<<<< HEAD
+//<<<<<<< HEAD
 //    @Test
 //    @DisplayName("Testing name")
 //    public void  testName() {
@@ -123,48 +123,48 @@ class TeaTest {
 //        // VERIFY PHASE
 //        assertEquals(new Liquid("rum", 0.002, 20), actual);
 //    }
-=======
-    @Test
-    @DisplayName("Testing name")
-    public void  testName() {
-        // EXERCISE PHASE
-        String actual = tea.getName();
-        String expected = "trialtea";
-
-        // VERIFY PHASE
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    @DisplayName("Testing herbs")
-    public void  testHerbs() {
-        // EXERCISE PHASE
-        String actual = tea.getHerbs();
-        String expected = "garden";
-
-        // VERIFY PHASE
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    @DisplayName("Testing liquid water")
-    public void  testWater() {
-        // EXERCISE PHASE
-        Liquid actual = tea.getWater();
-
-        // VERIFY PHASE
-        assertEquals(new Liquid("water", 0.5, 0), actual);
-    }
-
-    @Test
-    @DisplayName("Testing liquid rum")
-    public void  testRum() {
-        // EXERCISE PHASE
-        Liquid actual = tea.getRum();
-
-        // VERIFY PHASE
-        assertEquals(new Liquid("rum", 0.002, 20), actual);
-    }
->>>>>>> d359de08a8f32159155be09c58eefb1d1faddc6d
+//=======
+//    @Test
+//    @DisplayName("Testing name")
+//    public void  testName() {
+//        // EXERCISE PHASE
+//        String actual = tea.getName();
+//        String expected = "trialtea";
+//
+//        // VERIFY PHASE
+//        assertEquals(expected, actual);
+//    }
+//
+//    @Test
+//    @DisplayName("Testing herbs")
+//    public void  testHerbs() {
+//        // EXERCISE PHASE
+//        String actual = tea.getHerbs();
+//        String expected = "garden";
+//
+//        // VERIFY PHASE
+//        assertEquals(expected, actual);
+//    }
+//
+//    @Test
+//    @DisplayName("Testing liquid water")
+//    public void  testWater() {
+//        // EXERCISE PHASE
+//        Liquid actual = tea.getWater();
+//
+//        // VERIFY PHASE
+//        assertEquals(new Liquid("water", 0.5, 0), actual);
+//    }
+//
+//    @Test
+//    @DisplayName("Testing liquid rum")
+//    public void  testRum() {
+//        // EXERCISE PHASE
+//        Liquid actual = tea.getRum();
+//
+//        // VERIFY PHASE
+//        assertEquals(new Liquid("rum", 0.002, 20), actual);
+//    }
+//>>>>>>> d359de08a8f32159155be09c58eefb1d1faddc6d
 
 }

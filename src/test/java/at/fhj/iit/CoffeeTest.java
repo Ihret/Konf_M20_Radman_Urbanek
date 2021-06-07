@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * JUnit Test for the Class Coffee.
  * @author Mario Radman
  */
-class CoffeeTest {
+public class CoffeeTest {
 
     // Needed for all functions.
     public Coffee coffee;

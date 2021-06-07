@@ -135,8 +135,9 @@ public class CashRegister {
         return ("Total sales of none alcoholic drinks: " + totalSales + " currency unit, " + amount + " drinks (tea and coffee variations).");
     }
 
+
     /**
-     * method reportLowAlcoholicDrinks returns a String where due to the amount of alcohol in this case <=16% a report is written/calculated
+     * method reportLowAlcoholicDrinks returns a String where due to the amount of alcohol in this case smaller or equals 16% a report is written/calculated
      * @return
      */
     public static String reportLowAlcoholicDrinks() {

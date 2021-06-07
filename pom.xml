@@ -230,8 +230,8 @@
 
   <scm>
     <connection>scm:git:https://github.com/Ihret/Konf_M20_Radman_Urbanek</connection>
-    <developerConnection>scm:git:https://github.com/kaulex99/Konf_M20_Kauer_Khalil_Schedler</developerConnection>
+    <developerConnection>scm:git:https://github.com/Ihret/Konf_M20_Radman_Urbanek</developerConnection>
     <tag>HEAD</tag>
-    <url>https://github.com/kaulex99/Konf_M20_Kauer_Khalil_Schedler</url>
+    <url>https://github.com/Ihret/Konf_M20_Radman_Urbanek</url>
   </scm>
 </project>
