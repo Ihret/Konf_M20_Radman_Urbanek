@@ -36,18 +36,18 @@ Please consider to lookup in classes like Tea or Coffee, to see how it was done 
 Consider not using lone member-variables for the ingredients, but more members of type Liquid.
 
 ### Drink and Selling ###
-If new Methods or Members are needed for the Drinks in general, consider them to implement or announce them in the abstract Class Drink or in the Selling Interface.
+If new methods or members are needed for the Drinks in general, consider them to implement or announce them in the abstract Class Drink or in the Selling Interface.
 If it's needed for further improvements for Selling, do it in the Selling interface, otherwise in den Drink-Class.
 
 ## Seller ##
-If new Seller are needed, add them to the enum Seller.
+If new seller are needed, add them to the enum Seller.
 
 ## Cash Register ##
-Here you can have a CashRegister to save all sellings. If you plan to improve this, consider necessary changes in the constructor. 
+Here you can have a CashRegister to save all sales. If you plan to improve this, consider necessary changes in the constructor. 
 With further improvements and new information, new reports will be needed. Don't forget to implement them.
 
 ## Main Method ##
-Because it wasn't our assignment, we didn't implement scanner and user interface. This is the next step to do.
+Because it wasn't our assignment, we didn't implement scanner and user interface. This is the next step to-do.
 Consider using the main for this, maybe use an IOHandler.
 
 
