@@ -108,12 +108,11 @@ Not including the Classes for testing. These are listed in the Top "JUnit Test C
 		- randomNumber
 	* Adding new Enum Seller.java
 	* Updating main with report methods
-	
 - 07.06.2021:
-   * Updating CashRegister
-   * Adding new JUNIT-Test-Class: CashRegisterTest.java
-   * Updating markdowns: Coffee.md, TeaTest.md, ProjectStructure.md
-	* Adding new markdowns: CashRegister.md, CashRegisterTest.md, CoffeeTest.md, Tea.md
+  * Updating CashRegister
+  * Adding new JUNIT-Test-Class: CashRegisterTest.java
+  * Updating markdowns: Coffee.md, TeaTest.md, ProjectStructure.md
+  * Adding new markdowns: CashRegister.md, CashRegisterTest.md, CoffeeTest.md, Tea.md
 
 
 ## Procedure ##
@@ -204,6 +203,8 @@ For this, the current branch should not be the main. Then this git-command is us
 - 24.04.2021: TU: merged the teatest branch to the main branch.
 - 25.04.2021: MR: added new branch for testing class Coffee - named "CoffeeTest"
 - 25.04.2021: MR: merged the CoffeeTest branch to the main branch.
+- 17.05.2021: MR/TU: added new branch cashRegister for implementing new features: interface, enum and contructor CashRegister
+
 
 ## JUnit Test Classes ##
 - TeaTest
@@ -228,21 +229,65 @@ For this, the current branch should not be the main. Then this git-command is us
 	* toStringTest: tests if toString is returning the correct String.
 	* liquidEqualsTrueTest: tests if the new override method for equals in Liquid is correctly working for two different instances with the same values. Should return true.
 	* liquidEqualsFalseTest: same test as "liquidEqualsTrueTest", but for two instances with different values. Should return false.
-
+- CashRegisterTest
+	* testSellDrinks: tests sold drinks
+	* reportNonAlcoholicDrinksTest: tests non-alcoholic drinks repor
+	* reportLowAlcoholicDrinksTest: tests low alcoholic drinks repor
+	* reportHighAlcoholicDrinksTest: tests high alcoholic drinks repor
+	* reportSpecificDayTest: tests day report 
+	* reportSpecificSellerTest: tests seller report 
+	* reportSpecificDaySellerTest: tests a specific seller and date report 
+	* reportSpecificDayNullTest: tests report - nul
+	* reportSpecificSellerNullTest: tests seller report - null
+	* reportSpecificDaySellerNullSellerTest: tests specific seller and date report - seller null 
+	* reportSpecificDaySellerNullDateTest: tests specific seller and date report - date null
+	
 ### Test coverage ###
 The test coverage can be checked in IntelliJ by using the option "Run Test with Coverage". 
 It presents then the percentage of the coverage for the whole package and each class seperate, also seperated by methods and lines.
 In our application, the test coverage had following results:
 
-- TeaTest:
-	Tea: class: 100%, method: 100% (11/11), line: 100% (22/22)
-	Drink: class: 100%, method: 50% (1/2), line: 75% (3/4)
-	Liquid: class: 100%, method: 55% (5/9), line: 58% (14/24)
+#### TeaTest ####
+|classname|class|method|line|
+  |---|---|---|---|
+|Tea|100%|100% (12/12)|100% (24/24)|
+|Drink|100%|50% (1/2)|75% (3/4)|
+|Liquid|100%|55% (5/9)|58% (14/24)|
+
+#### CoffeeTest ####
+
+  |classname|class|method|line|
+  |---|---|---|---|
+  |Tea|100%|100% (11/11)|100% (26/26)|
+  |Drink|100%|100% (2/2)|100% (4/4)|
+  |Liquid|100%|55% (5/9)|62% (15/24)|
 	
-- CoffeeTest:
-	Coffee: class: 100%, method: 100% (8/8), line: 100% (18/18)
-	Drink: class: 100%, method: 100% (2/2), line: 100% (4/4)
-	Liquid: class: 100%, method: 55% (5/9), line: 62% (15/24)
+#### CashRegisterTest ####
+|classname|class|method|line|
+  |---|---|---|---|
+|CashRegister|100%|100% (15/15)|100% (50/50)|
+|Coffee|100%|45% (5/11)|50% (13/26)|
+|Drink|100%|50% (1/2)|75% (3/4)|
+|Liquid|100%|55% (5/9)|58% (14/24)|
+|Seller|100%|100% (2/2)|100% (4/4)|
+|Tea|100%|91% (11/12)|95% (23/24)|	
+  
+#### LiquidTest ####
+|classname|class|method|line|
+  |---|---|---|---|
+|LiquidTest|100%|100% (9/9)|95% (23/24)|
+
+#### SimpleDrinkTest ####
+|classname|class|method|line|
+  |---|---|---|---|
+|SimpleDrink|100%|100% (7/7)|95% (11/11)|
+|LiquidTest|100%|44% (4/9)|41% (10/24)|
+|Drink|100%|50% (1/2)|75% (3/4)|
+
+- full test  coverage
+	* for all classes 100% 
+	* for all methods in all classes 100% 
+	* for all lines in all classes 100%
 
 - General comment:
 	"Real" 100% is never fully possible, because sometimes developers are forgetting or overlooking something.
